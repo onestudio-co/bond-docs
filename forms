@@ -1,0 +1,66 @@
+# Form Bond
+
+Form Bond is a Dart/Flutter package that provides robust and customizable form state management solutions. This library is designed to make working with forms in Flutter more reliable, maintainable, and enjoyable.
+
+It provides a way to manage the state of various types of form fields, along with validation and error handling. Form Bond supports TextField, Checkbox, Dropdown, Date, Radio, and more. It also allows for easy creation of custom form field states and validation rules, making it adaptable to any use case.
+
+## Why Create Form Bond?
+
+Forms are an integral part of any application that interacts with users. Managing form state, especially in complex forms, can become cumbersome and error-prone. Form Bond addresses these challenges by providing a powerful and flexible API for managing form state, validation, and errors, enabling you to build forms with confidence and ease.
+
+## River Form Bond
+
+Form Bond also comes with out-of-the-box integration with Riverpod, a popular state management solution for Flutter. Riverpod allows for robust state management and combines well with Form Bond's strong form handling capabilities.
+
+## Getting Started
+
+You can add Form Bond to your Flutter project by adding the following to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  form_bond: ^latest_version
+```
+
+Then, run `flutter pub get` to fetch the package.
+
+## Bond Form Riverpod
+
+If you want to use Form Bond with Riverpod, you can do so by using the `bond_form_riverpod` package. This package provides a set of Riverpod providers that integrate smoothly with Form Bond.
+
+## Create Your Custom State Management from Form Bond
+
+Form Bond allows you to create your own custom state management system based on its foundational components. This provides the flexibility to manage your form state in the way that best suits your application's needs.
+
+## FormFieldState
+
+Form Bond provides a `FormFieldState` class for each type of form field it supports. These classes handle the state management for their respective form fields, including value storage, validation, and error handling.
+
+Supported form field types include:
+
+- `TextFieldState`
+- `CheckboxFieldState`
+- `CheckboxGroupFieldState`
+- `DateFieldState`
+- `DropDownFieldState`
+- `RadioButtonFieldState`
+- `RadioGroupFieldState`
+
+## Creating Custom FormFieldState
+
+You can also create your own custom `FormFieldState` subclasses to manage the state of custom form fields. This allows you to adapt Form Bond to any unique form field requirements your application may have.
+
+## ValidationRule
+
+ValidationRule is a key concept in Form Bond. Each ValidationRule defines a specific validation requirement for a form field. Form Bond provides a set of pre-defined validation rules, such as `Required`, `Email`, `Numeric`, and `MinLength`, among others.
+
+## Creating Custom ValidationRule
+
+Form Bond allows for the creation of custom validation rules by subclassing `ValidationRule`. This enables you to define any form field validation logic that your application needs.
+
+## Example: Login Form
+
+(Provide example code of a login form using Form Bond)
+
+## Example: Order a Pizza Form
+
+(Provide example code of an order a pizza form using Form Bond)
