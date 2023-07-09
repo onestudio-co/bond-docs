@@ -43,6 +43,17 @@ any use case.
   - [DateAfter](#dateafter)
   - [IsTrue](#istrue)
   - [IsFalse](#isfalse)
+  - [DateBefore.fromString](#datebeforefromstring)
+  - [DateAfter.fromString](#dateafterfromstring)
+  - [Alpha](#alpha)
+  - [AlphaDash](#alphadash)
+  - [AlphaNum](#alphanum)
+  - [Between](#between)
+  - [Boolean](#boolean)
+  - [Date](#date)
+  - [Different](#different)
+  - [Digits](#digits)
+  - [DigitsBetween](#digitsbetween)
 - [Creating Custom FormFieldState](#creating-custom-formfieldstate)
 - [Creating Custom ValidationRule](#creating-custom-validationrule)
 - [Example: Login Form](#example-login-form)
@@ -462,19 +473,6 @@ final dobField = DateFieldState(
 
 In this example, `dobField` should be a date before the current date.
 
-You can use `dateBefore` with string date
-
-```dart
-final dobField = DateFieldState(
-  null,
-  label: 'Date of Birth',
-  rules: [
-    Rules.required(),
-    Rules.dateBeforeFromString('2000-01-01', format: 'yyyy-MM-dd'),
-  ],
-);
-```
-
 ### DateAfter
 
 The `dateAfter` rule validates that the date input is after a specified date. It's useful for date fields like an end date which should be after a certain date.
@@ -488,20 +486,6 @@ final endDateField = DateFieldState(
 ```
 
 In this example, `endDateField` should be a date after the current date.
-
-
-You can use `dateAfter` with string date
-
-```dart
-final endDateField = DateFieldState(
-  null,
-  label: 'End Date',
-  rules: [
-    Rules.required(),
-    Rules.dateBeforeFromString('2034-01-01', format: 'yyyy-MM-dd'),
-  ],
-);
-```
 
 ### IsTrue
 
@@ -531,10 +515,166 @@ final rejectOfferField = CheckboxFieldState(
 
 In this example, `rejectOfferField` must be unchecked (i.e., false) to proceed.
 
+### DateBefore.fromString
 
-These are just a few examples, but there are many ways to use these rules to ensure that the data
-your application receives is valid. Adjust and combine them as necessary to fit your needs!
+The `dateBeforeFromString` rule validates that the date input is before a specified date, where the date is given as a string. This is useful in scenarios where you have a date in a string format that needs to be compared with the input date.
 
+```dart
+final hireDateField = DateFieldState(
+  null,
+  label: 'Hire Date',
+  rules: [Rules.required(), Rules.dateBeforeFromString('2023-12-31')],
+);
+```
+
+In this example, `hireDateField` should be a date before December 31, 2023.
+
+### DateAfter.fromString
+
+The `dateAfterFromString` rule validates that the date input is after a specified date, where the date is given as a string. This is helpful in scenarios where you have a date in a string format that needs to be compared with the input date.
+
+```dart
+final projectStartDateField = DateFieldState(
+  null,
+  label: 'Project Start Date',
+  rules: [Rules.required(), Rules.dateAfterFromString('2023-01-01')],
+);
+```
+
+In this example, `projectStartDateField` should be a date after January 1, 2023.
+
+### Alpha
+
+The `Alpha` rule validates that the input consists of alphabetic characters only. This is useful for name fields, city fields, etc.
+
+```dart
+final nameField = TextFieldState(
+  '',
+  label: 'Name',
+  rules: [Rules.required(), Rules.alpha()],
+);
+```
+
+In this example, `nameField` should only contain alphabetic characters.
+
+### AlphaDash
+
+The `AlphaDash` rule validates that the input consists of alphabetic characters, digits, hyphens or underscores. This is useful for username fields, IDs, etc.
+
+```dart
+final usernameField = TextFieldState(
+  '',
+  label: 'Username',
+  rules: [Rules.required(), Rules.alphaDash()],
+);
+```
+
+In this example, `usernameField` should only contain alphabetic characters, digits, hyphens or underscores.
+
+### AlphaNum
+
+The `AlphaNum` rule validates that the input consists of alphabetic characters or digits. This is useful for password fields, ID fields, etc.
+
+```dart
+final passwordField = TextFieldState(
+  '',
+  label: 'Password',
+  rules: [Rules.required(), Rules.alphaNum()],
+);
+```
+
+In this example, `passwordField` should only contain alphabetic characters or digits.
+
+### Between
+
+The `Between` rule validates that the length of the input falls within a specified range. This is useful for inputs that have both minimum and maximum length constraints, such as passwords, usernames, etc.
+
+```dart
+final usernameField = TextFieldState(
+  '',
+  label: 'Username',
+  rules: [Rules.required(), Rules.between(min: 5, max: 15)],
+);
+```
+
+In this example, the length of the `usernameField` should be between 5 and 15 characters.
+
+### Boolean
+
+The `Boolean` rule validates that the input is a boolean value, i.e., either `true` or `false`. This is useful for checkbox fields.
+
+```dart
+final termsAcceptedField = CheckboxFieldState(
+  false,
+  label: 'I accept the terms and conditions',
+  rules: [Rules.required(), Rules.boolean()],
+);
+```
+
+In this example, `termsAcceptedField` should be either `true` or `false`.
+
+### Date
+
+The `Date` rule validates that the input is a date. This is useful for date fields.
+
+```dart
+final birthDateField = DateFieldState(
+  null,
+  label: 'Date of Birth',
+  rules: [Rules.required(), Rules.date()],
+);
+```
+
+In this example, `birthDateField` should be a valid date.
+
+### Different
+
+The `Different` rule validates that the input is different from the value of another field. This is useful when two fields should not have the same value, like password and username fields.
+
+```dart
+final passwordField = TextFieldState(
+  '',
+  label: 'Password',
+  rules: [Rules.required(), Rules.different('usernameField')],
+);
+
+final usernameField = TextFieldState(
+  '',
+  label: 'Username',
+  rules: [Rules.required()],
+);
+```
+
+In this example, `passwordField` and `usernameField` should have different values.
+
+### Digits
+
+The `Digits` rule validates that the input is a numeric value with a specified number of digits. This is useful for inputs like PIN codes.
+
+```dart
+final pinCodeField = TextFieldState(
+  '',
+  label: 'PIN Code',
+  rules: [Rules.required(), Rules.digits(digitLength: 4)],
+);
+```
+
+In this example, `pinCodeField` should be a 4-digit number.
+
+### DigitsBetween
+
+The `DigitsBetween` rule validates that the input is a numeric value with a number of digits falling within a specified range. This is useful for inputs like variable-length PIN codes.
+
+```dart
+final pinCodeField = TextFieldState(
+  '',
+  label: 'PIN Code',
+  rules: [Rules.required(), Rules.digitsBetween(min: 4, max: 6)],
+);
+```
+
+In this example, `pinCodeField` should be a number with 4 to 6 digits.
+This covers all the validation rules in the `Rules` class. Note that the power of these rules comes from combining them to create complex validation scenarios for your form fields. Happy form building!
 
 ## Creating Custom FormFieldState
 
