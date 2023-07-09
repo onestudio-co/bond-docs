@@ -462,6 +462,19 @@ final dobField = DateFieldState(
 
 In this example, `dobField` should be a date before the current date.
 
+You can use `dateBefore` with string date
+
+```dart
+final dobField = DateFieldState(
+  null,
+  label: 'Date of Birth',
+  rules: [
+    Rules.required(),
+    Rules.dateBeforeFromString('2000-01-01', format: 'yyyy-MM-dd'),
+  ],
+);
+```
+
 ### DateAfter
 
 The `dateAfter` rule validates that the date input is after a specified date. It's useful for date fields like an end date which should be after a certain date.
@@ -475,6 +488,20 @@ final endDateField = DateFieldState(
 ```
 
 In this example, `endDateField` should be a date after the current date.
+
+
+You can use `dateAfter` with string date
+
+```dart
+final endDateField = DateFieldState(
+  null,
+  label: 'End Date',
+  rules: [
+    Rules.required(),
+    Rules.dateBeforeFromString('2034-01-01', format: 'yyyy-MM-dd'),
+  ],
+);
+```
 
 ### IsTrue
 
