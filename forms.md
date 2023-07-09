@@ -9,6 +9,45 @@ error handling. Form Bond supports TextField, Checkbox, Dropdown, Date, Radio, a
 allows for easy creation of custom form field states and validation rules, making it adaptable to
 any use case.
 
+## Index
+
+- [Why Create Form Bond?](#why-create-form-bond)
+- [River Form Bond](#river-form-bond)
+- [Getting Started](#getting-started)
+- [Bond Form Riverpod](#bond-form-riverpod)
+- [Create Your Custom State Management from Form Bond](#create-your-custom-state-management-from-form-bond)
+- [FormFieldState](#formfieldstate)
+  - [TextFieldState](#textfieldstate)
+  - [CheckboxFieldState](#checkboxfieldstate)
+  - [CheckboxGroupFieldState](#checkboxgroupfieldstate)
+  - [DateFieldState](#datefieldstate)
+  - [DropDownFieldState](#dropdownfieldstate)
+  - [RadioGroupFieldState](#radiogroupfieldstate)
+- [ValidationRule](#validationrule)
+  - [Required](#required)
+  - [Email](#email)
+  - [MaxLength and MinLength](#maxlength-and-minlength)
+  - [RequiredIf](#requiredif)
+  - [MinValue and MaxValue](#minvalue-and-maxvalue)
+  - [InList](#inlist)
+  - [Integer](#integer)
+  - [NotInList](#notinlist)
+  - [Numeric](#numeric)
+  - [Regex](#regex)
+  - [Same](#same)
+  - [Size](#size)
+  - [Url](#url)
+  - [MinSelected and MaxSelected](#minselected-and-maxselected)
+  - [RangeSelected](#rangeselected)
+  - [DateBefore](#datebefore)
+  - [DateAfter](#dateafter)
+  - [IsTrue](#istrue)
+  - [IsFalse](#isfalse)
+- [Creating Custom FormFieldState](#creating-custom-formfieldstate)
+- [Creating Custom ValidationRule](#creating-custom-validationrule)
+- [Example: Login Form](#example-login-form)
+- [Example: Order a Pizza Form](#example-order-a-pizza-form)
+
 ## Why Create Form Bond?
 
 Forms are an integral part of any application that interacts with users. Managing form state,
@@ -154,21 +193,20 @@ use cases for these rules.
 Ensuring that a user fills out all necessary fields in a form, such as a
 registration form where a user must enter their username, email, and password.
 
-   ```dart
-
-final usernameField = TextFieldState(
-  '',
+ ```dart
+ final usernameField = TextFieldState(
+    '',
   label: 'Username',
   rules: [Rules.required()],
 );
-   ```
+ ```
 
 ### Email:
 
 Verifying that a user enters a valid email in an email field. This can be used in a
 login form or registration form.
 
-   ```dart
+ ```dart
 
 final emailField = TextFieldState(
   '',
@@ -182,14 +220,14 @@ final emailField = TextFieldState(
 Enforcing a character limit on a text field. This can be used in a
 username field where you might want a minimum and maximum character limit.
 
-   ```dart
+ ```dart
 
 final usernameField = TextFieldState(
   '',
   label: 'Username',
   rules: [Rules.required(), Rules.minLength(4), Rules.maxLength(10)],
 );
-   ```
+```
 
 ### RequiredIf:
 
@@ -197,7 +235,7 @@ Checking that a field is filled out only if a condition is met. For example,
 if a user chooses "other" in a dropdown, you might want them to fill out an explanation
 field.
 
-   ```dart
+```dart
 
 final dropdownField = DropDownFieldState<String?>(
   null,
@@ -223,35 +261,35 @@ final otherExplanationField = TextFieldState(
   label: 'Please explain',
   rules: [Rules.requiredIf(condition: () => dropdownField.value == 'other')],
 );
-   ```
+```
 
 ### MinValue and MaxValue:
 
 Enforcing numeric limits on a field. This could be used in a form
 where a user enters their age, and you want to ensure they are between certain ages.
 
-   ```dart
+```dart
 
 final ageField = TextFieldState(
   0,
   label: 'Age',
   rules: [Rules.required(), Rules.minValue(13), Rules.maxValue(120)],
 );
-   ```
+ ```
 
 ### InList:
 
 Ensuring the selected value is within a list of valid values. This can be used with a
 dropdown field.
 
-   ```dart
+ ```dart
 
 final genderField = DropDownFieldState<Gender>(
   null,
   label: 'Gender',
   rules: [Rules.required(), Rules.inList<Gender>(Gender.values)],
 );
-   ```
+```
 
 Sure, let's continue with the rest of the rules and their respective real-world use-cases.
 
