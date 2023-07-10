@@ -299,10 +299,7 @@ final otherExplanationField = TextFieldState(
   '',
   label: 'Please explain',
   rules: [
-    Rules.requiredIf(
-       'dropdownField',
-	    equalTo: 'other',
-    ),
+    Rules.requiredIf('dropdownField', equalTo: 'other'),
   ],
 );
 
