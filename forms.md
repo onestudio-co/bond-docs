@@ -1,3 +1,4 @@
+
 # Form Bond
 
 Form Bond is a Dart/Flutter package that provides robust and customizable form state management
@@ -165,11 +166,24 @@ means the field is required and the selected date must be before the current dat
 ### DropDownFieldState
 
 ```dart
-
-final genderField = DropDownFieldState<Gender>(
-  null,
-  label: 'Gender',
-  rules: [Rules.required(), Rules.inList(Gender.values)],
+enum Gender { male, female }
+final genderField = DropDownFieldState<Gender>(  
+  Gender.male,  
+  label: 'Gender',  
+  items: [  
+    DropDownItemState(  
+      Gender.male,  
+      label: 'Male',  
+    ),  
+    DropDownItemState(  
+      Gender.female,  
+      label: 'Female',  
+    ),  
+  ],  
+  rules: [  
+    Rules.required(),  
+    Rules.inList(Gender.values),  
+  ],  
 );
 ```
 
@@ -180,10 +194,21 @@ the dropdown.
 
 ```dart
 
-final newsletterSubscriptionField = RadioGroupFieldState<bool>(
-  [yesOption, noOption],
-  label: 'Subscribe to newsletter',
-  rules: [Rules.required()],
+final newsletterSubscriptionField = RadioGroupFieldState<bool>(  
+  [  
+    RadioButtonFieldState(  
+      true,  
+      label: 'Yes',  
+    ),  
+    RadioButtonFieldState(  
+      false,  
+      label: 'No',  
+    ),  
+  ],  
+  label: 'Subscribe to newsletter',  
+  rules: [  
+    Rules.required(),  
+  ],  
 );
 ```
 
@@ -248,10 +273,26 @@ field.
 
 ```dart
 
-final dropdownField = DropDownFieldState<String?>(
-  null,
-  label: 'Please select an option',
-  rules: [Rules.required()],
+final dropdownField = DropDownFieldState<String?>(  
+  null,  
+  items: [  
+    DropDownItemState(  
+      'not_feel_safe',  
+      label: 'Not Feel Safe',  
+    ),  
+    DropDownItemState(  
+      'not_useful',  
+      label: 'Not Useful',  
+    ),  
+    DropDownItemState(  
+      'other',  
+      label: 'Other',  
+    ),  
+  ],  
+  label: 'Please select an option',  
+  rules: [  
+    Rules.required(),  
+  ],  
 );
 
 final otherExplanationField = TextFieldState(
@@ -259,8 +300,8 @@ final otherExplanationField = TextFieldState(
   label: 'Please explain',
   rules: [
     Rules.requiredIf(
-      otherFieldName: 'dropdownField',
-      expectedValue: 'other',
+       'dropdownField',
+	    equalTo: 'other',
     ),
   ],
 );
@@ -270,7 +311,7 @@ final otherExplanationField = TextFieldState(
 final otherExplanationField = TextFieldState(
   '',
   label: 'Please explain',
-  rules: [Rules.requiredIf(condition: () => dropdownField.value == 'other')],
+  rules: [Rules.requiredIfCondition(condition: () => dropdownField.value == 'other')],
 );
 ```
 
@@ -743,4 +784,4 @@ enables you to define any form field validation logic that your application need
 
 ## Example: Order a Pizza Form
 
-(Provide example code of an order a pizza form using Form Bond)
+(Provide example code of an order a pizza form using Form Bond
