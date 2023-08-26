@@ -9,6 +9,7 @@ BondFire is a simple and powerful API client built on top of the Dio package for
   - [Configuration](#configuration)
   - [Making API Requests](#making-api-requests)
   - [Handling Responses](#handling-responses)
+  - [DoubleConverter Usage](#doubleconverter-usage)
   - [Error Handling](#error-handling)
   - [Caching](#caching)
   - [Cache custom keys](#cache-custom-keys)
@@ -149,6 +150,31 @@ final userListMResponse = await bondFire.get<ListMResponse<User, Metadata>>('/us
 
 print("User list: ${userListMResponse.data}");
 print("Metadata: ${userListMResponse.metadata}");
+```
+### DoubleConverter Usage
+
+BondFire provides a built-in `DoubleConverter` class to handle flexible JSON field types. This is particularly useful when the API can return a field in multiple data types (e.g., `String`, `int`, `double`).
+
+#### Basic Usage
+
+To use `DoubleConverter`, simply annotate the model field with `@DoubleConverter()`:
+
+```dart
+import 'package:bondfire/bondfire.dart';
+
+@JsonSerializable()
+class Product {
+  final int id;
+  final String name;
+
+  @DoubleConverter()
+  final double price;
+
+  Product({required this.id, required this.name, required this.price});
+
+  factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
+  Map<String, dynamic> toJson() => _$ProductToJson(this);
+}
 ```
 
 ### Error Handling
