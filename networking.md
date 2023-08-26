@@ -2,6 +2,19 @@
 
 BondFire is a simple and powerful API client built on top of the Dio package for Dart and Flutter projects. It simplifies making API requests and handling responses by providing a clean and easy-to-use interface.
 
+## Table of Contents
+
+- [Features](#features)
+- [Usage](#usage)
+  - [Configuration](#configuration)
+  - [Making API Requests](#making-api-requests)
+  - [Handling Responses](#handling-responses)
+  - [Error Handling](#error-handling)
+  - [Caching](#caching)
+  - [Cache custom keys](#cache-custom-keys)
+- [Conclusion](#conclusion)
+
+
 ## Features
 
  - Easy configuration of API base URL, headers, and other settings
