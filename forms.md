@@ -13,7 +13,7 @@ any use case.
 ## Index
 
 - [Why Create Form Bond?](#why-create-form-bond)
-- [River Form Bond](#river-form-bond)
+- [Form Bond Riverpod](#form_bond_riverpod)
 - [Getting Started](#getting-started)
 - [Bond Form Riverpod](#river_form_bond)
 - [Create Your Custom State Management from Form Bond](#create-your-custom-state-management-from-form-bond)
@@ -78,7 +78,7 @@ dependencies:
 
 Then, run `flutter pub get` to fetch the package.
 
-## River Form Bond
+## Form Bond Riverpod
 
 Form Bond also comes with out-of-the-box integration with Riverpod, a popular state management
 solution for Flutter. Riverpod allows for robust state management and combines well with Form Bond's
