@@ -73,6 +73,32 @@ Form Bond also comes with out-of-the-box integration with Riverpod, a popular st
 solution for Flutter. Riverpod allows for robust state management and combines well with Form Bond's
 strong form handling capabilities.
 
+## Core Components:
+
+### `FormStateNotifier`
+
+An abstract class that helps you manage your form state, providing essential functionalities for form validation and submission. It extends the Riverpod's `Notifier` class and mixes in `FormController` for added capabilities. The state is represented as an instance of `BondFormState`, which encapsulates all the form fields and their statuses.
+
+Example:
+
+```dart
+class MyFormStateNotifier extends FormStateNotifier<String, MyError> {
+  // Implement required methods...
+}
+```
+
+### `AutoDisposeFormStateNotifier`
+
+Like `FormStateNotifier`, but it extends `AutoDisposeNotifier` for auto resource cleanup. It's perfect for forms that need to be efficient with resource usage, especially when they are no longer in the user's view.
+
+Example:
+
+```dart
+class MyAutoDisposeFormStateNotifier extends AutoDisposeFormStateNotifier<String, MyError> {
+  // Implement required methods...
+}
+```
+
 ## Getting Started
 
 You can add Form Bond to your Flutter project by adding the following to your `pubspec.yaml`:
