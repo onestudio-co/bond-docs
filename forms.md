@@ -15,7 +15,7 @@ any use case.
 - [Why Create Form Bond?](#why-create-form-bond)
 - [River Form Bond](#river-form-bond)
 - [Getting Started](#getting-started)
-- [Bond Form Riverpod](#bond-form-riverpod)
+- [Bond Form Riverpod](#river_form_bond)
 - [Create Your Custom State Management from Form Bond](#create-your-custom-state-management-from-form-bond)
 - [FormFieldState](#formfieldstate)
   - [TextFieldState](#textfieldstate)
@@ -112,8 +112,6 @@ class MyAutoDisposeFormStateNotifier extends AutoDisposeFormStateNotifier<String
   // Implement required methods...
 }
 ```
-
-
 
 ## Create Your Custom State Management from Form Bond
 
