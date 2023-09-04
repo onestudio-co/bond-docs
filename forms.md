@@ -777,7 +777,170 @@ enables you to define any form field validation logic that your application need
 
 ## Example: Login Form
 
-(Provide example code of a login form using Form Bond)
+In this example, we'll create a simple login form in Flutter using the `LoginFormController` and `LoginPage`.
+
+## LoginFormController
+
+The `LoginFormController` is responsible for managing the login form's state and handling form submission. Here's the code for the `LoginFormController`:
+
+```dart
+
+import 'dart:developer';
+
+import 'package:bond_form/bond_form.dart';
+import 'package:bond_form_riverpod/bond_form_riverpod.dart';
+import 'package:example/features/auth/data/errors/account_not_found_error.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class LoginFormController extends FormStateNotifier<String, Error> {
+  @override
+  Map<String, FormFieldState> fields() =>
+          {
+            'email': TextFieldState(
+              null,
+              label: 'Email',
+              rules: [
+                Rules.required(),
+                Rules.email(),
+              ],
+            ),
+            'password': TextFieldState(
+              null,
+              label: 'Password',
+              rules: [
+                Rules.required(),
+                Rules.minLength(6),
+                Rules.alphaNum(),
+              ],
+            ),
+          };
+
+  @override
+  Future<String> onSubmit() async {
+    final email = state
+            .get('email')
+            .value;
+    final password = state
+            .get('password')
+            .value;
+    log('email: $email, password: $password');
+    await Future.delayed(const Duration(seconds: 1));
+    if (email != 'salahnahed@icloud.com') {
+      throw AccountNotFoundError();
+    }
+    return 'Success';
+  }
+}
+
+final loginProvider =
+NotifierProvider<LoginFormController, BondFormState<String, Error>>(
+  LoginFormController.new,
+);
+
+```
+
+## LoginPage
+
+The `LoginPage` is a Flutter widget that utilizes the `LoginFormController` to build a login form. Here's the code for the `LoginPage`:
+
+```dart
+
+import 'package:bond_form/bond_form.dart';
+import 'package:example/features/auth/presentations/providers/login_provider.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class LoginPage extends ConsumerWidget {
+  const LoginPage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final formState = ref.watch(loginProvider);
+    ref.listen(
+      loginProvider,
+              (previous, next) => _formStateListener(context, previous, next),
+    );
+    return Scaffold(
+      appBar: AppBar(title: const Text('Login')),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          children: [
+            TextFormField(
+              keyboardType: TextInputType.emailAddress,
+              onChanged: (value) =>
+                      ref.read(loginProvider.notifier).update('email', value),
+              decoration: InputDecoration(
+                labelText: formState.label('email'),
+                errorText: formState.error('email'),
+                prefixIcon: const Icon(Icons.email),
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            TextFormField(
+              keyboardType: TextInputType.text,
+              onChanged: (value) =>
+                      ref.read(loginProvider.notifier).update('password', value),
+              decoration: InputDecoration(
+                labelText: formState.label('password'),
+                errorText: formState.error('password'),
+                prefixIcon: const Icon(Icons.lock),
+              ),
+            ),
+            const SizedBox(height: 16),
+            if (formState.status == BondFormStateStatus.submitting)
+              const CircularProgressIndicator()
+            else
+              MaterialButton(
+                onPressed: ref
+                        .read(loginProvider.notifier)
+                        .submit,
+                height: 48,
+                color: formState.status == BondFormStateStatus.invalid
+                        ? Colors.red
+                        : Colors.blueAccent,
+                child: const Text(
+                  'Login',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              )
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _formStateListener(BuildContext context,
+          BondFormState<String, Error>? previous,
+          BondFormState<String, Error> next,) {
+    switch (next.status) {
+      case BondFormStateStatus.submitted:
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Submitted'),
+            backgroundColor: Colors.green,
+          ),
+        );
+        break;
+      case BondFormStateStatus.failed:
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(next.failure.toString()),
+            backgroundColor: Colors.red,
+          ),
+        );
+        break;
+      default:
+        break;
+    }
+  }
+}
+
+```
 
 ## Example: Order a Pizza Form
 
