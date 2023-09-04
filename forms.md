@@ -779,7 +779,7 @@ enables you to define any form field validation logic that your application need
 
 In this example, we'll create a simple login form in Flutter using the `LoginFormController` and `LoginPage`.
 
-## LoginFormController
+### LoginFormController
 
 The `LoginFormController` is responsible for managing the login form's state and handling form submission. Here's the code for the `LoginFormController`:
 
@@ -839,7 +839,7 @@ NotifierProvider<LoginFormController, BondFormState<String, Error>>(
 
 ```
 
-## LoginPage
+### LoginPage
 
 The `LoginPage` is a Flutter widget that utilizes the `LoginFormController` to build a login form. Here's the code for the `LoginPage`:
 
