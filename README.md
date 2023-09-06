@@ -46,9 +46,9 @@ If you find any issues or errors in the documentation, please report them by ope
 
 ## Related Repos
 
-- [Flutter Bond](https://github.com/your_organization/flutter-bond)
-- [Bond Core](https://github.com/your_organization/bond-core)
-- [Bond CLI](https://github.com/your_organization/bond-cli)
+- [Flutter Bond](https://github.com/onestudio-co/flutter-bond)
+- [Bond Core](https://github.com/onestudio-co/bond-core)
+- [Bond CLI](https://github.com/onestudio-co/bond-cli)
 
 ---
 
