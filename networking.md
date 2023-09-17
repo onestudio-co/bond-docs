@@ -9,7 +9,8 @@ BondFire is a simple and powerful API client built on top of the Dio package for
   - [Configuration](#configuration)
   - [Making API Requests](#making-api-requests)
   - [Handling Responses](#handling-responses)
-  - [DoubleConverter Usage](#doubleconverter-usage)
+  - [Extensions](#extensions)
+  - [Converters](#converters)
   - [Error Handling](#error-handling)
   - [Caching](#caching)
   - [Cache custom keys](#cache-custom-keys)
@@ -151,11 +152,52 @@ final userListMResponse = await bondFire.get<ListMResponse<User, Metadata>>('/us
 print("User list: ${userListMResponse.data}");
 print("Metadata: ${userListMResponse.metadata}");
 ```
-### DoubleConverter Usage
+
+### Extensions
+
+#### Merging ListResponses: `XListResponse`
+
+The `XListResponse` extension provides a `merge` method that allows you to easily merge two `ListResponse` objects. This is particularly useful when paginating data or updating an existing `ListResponse` with new items.
+
+Here is an example of how to use it:
+
+```dart
+// Create two ListResponse instances
+final listResponse1 = ListResponse<AnyModel>(
+  data: [AnyModel(id: 1), AnyModel(id: 2)],
+);
+
+final listResponse2 = ListResponse<AnyModel>(
+  data: [AnyModel(id: 3), AnyModel(id: 4)],
+);
+
+// Merge the two instances
+final mergedListResponse = listResponse1.merge(listResponse2);
+
+// Verify if the data is merged correctly
+print("Merged list data: ${mergedListResponse.data}"); // Output: [AnyModel(id: 1), AnyModel(id: 2), AnyModel(id: 3), AnyModel(id: 4)]
+```
+
+The `merge` method also takes into consideration the `meta` and `links` of the second `ListResponse`:
+
+```dart
+// The 'meta' and 'links' of listResponse2 will override those of listResponse1
+final mergedListResponse = listResponse1.merge(listResponse2);
+
+// To verify
+print("Merged list meta: ${mergedListResponse.meta}");
+print("Merged list links: ${mergedListResponse.links}");
+```
+
+---
+
+### Converters
+
+#### DoubleConverter Usage
 
 BondFire provides a built-in `DoubleConverter` class to handle flexible JSON field types. This is particularly useful when the API can return a field in multiple data types (e.g., `String`, `int`, `double`).
 
-#### Basic Usage
+##### Basic Usage
 
 To use `DoubleConverter`, simply annotate the model field with `@DoubleConverter()`:
 
