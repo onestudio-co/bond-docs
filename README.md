@@ -18,10 +18,6 @@ Welcome to the official documentation repository for Flutter Bond and Bond Core.
 11. [Notifications](./notifications.md)
 12. [Themes](./themes.md)
 
-Click on each topic to navigate to the respective documentation.
-
-Feel free to adjust the numbering or ordering based on the importance or flow you'd like to establish.
-
 ## Why Bond Docs?
 
 Documentation is as important as the code itself. We aim to make our frameworks accessible and understandable for developers of all levels through these docs.
