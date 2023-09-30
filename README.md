@@ -17,7 +17,7 @@ Welcome to the official documentation repository for Flutter Bond and Bond Core.
 10. [Networking](./networking.md)
 11. [Notifications](./notifications.md)
 12. [Themes](./themes.md)
-
+13. [Bond Extensions](./bond_extensions.md)
 ## Why Bond Docs?
 
 Documentation is as important as the code itself. We aim to make our frameworks accessible and understandable for developers of all levels through these docs.
