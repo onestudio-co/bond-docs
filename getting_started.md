@@ -1,22 +1,22 @@
 # Getting Started with Flutter Bond
 
   
- **Table of Contents**
-- [🚀 Installation and Project Initialization](#🚀-installation-and-project-initialization)
-  - [🛠️ Using Bond CLI (Recommended)](#🛠️-using-bond-cli-recommended)
-  - [📦 Using Flutter Bond GitHub Template](#📦-using-flutter-bond-github-template)
-- [🌍 Environment Variables](#🌍-environment-variables)
-- [🔥 Firebase Integration](#🔥-firebase-integration)
-- [🚪 App Entry Point](#🚪-app-entry-point)
-  - [🛡️ Service Providers](#🛡️-service-providers)
-- [📚 Bond Ecosystem Overview](#📚-bond-ecosystem-overview)
-  - [🌐 Bond Fire: Powerful API Client](#🌐-bond-fire-powerful-api-client)
-  - [✒️ Bond Form: Reliable Form Management](#✒️-bond-form-reliable-form-management)
-  - [🗃️ Bond Cache: Efficient Caching](#🗃️-bond-cache-efficient-caching)
-  - [🔔 Bond Notification (Beacon): Comprehensive Notification Handling](#🔔-bond-notification-beacon-comprehensive-notification-handling)
-  - [🎨 Themes: Guidelines and Best Practices](#🎨-themes-guidelines-and-best-practices)
-  - [🧩 Bond Core Extensions](#🧩-bond-core-extensions)
-- [📖 Detailed Documentation](#📖-detailed-documentation)
+**Table of Contents**
+- [🚀 Installation and Project Initialization](#-installation-and-project-initialization)
+  - [🛠️ Using Bond CLI (Recommended)](#️-using-bond-cli-recommended)
+  - [📦 Using Flutter Bond GitHub Template](#-using-flutter-bond-github-template)
+- [🌍 Environment Variables](#-environment-variables)
+- [🔥 Firebase Integration](#-firebase-integration)
+- [🚪 App Entry Point](#-app-entry-point)
+- [🛡️ Service Providers](#️-service-providers)
+- [📚 Bond Ecosystem Overview](#-bond-ecosystem-overview)
+  - [🌐 Bond Fire: Powerful API Client](#-bond-fire-powerful-api-client)
+  - [✒️ Bond Form: Reliable Form Management](#️-bond-form-reliable-form-management)
+  - [🗃️ Bond Cache: Efficient Caching](#️-bond-cache-efficient-caching)
+  - [🔔 Bond Notification (Beacon): Comprehensive Notification Handling](#-bond-notification-beacon-comprehensive-notification-handling)
+  - [🎨 Themes: Guidelines and Best Practices](#-themes-guidelines-and-best-practices)
+  - [🧩 Bond Core Extensions](#-bond-core-extensions)
+- [📖 Detailed Documentation](#-detailed-documentation)
 
 
 ## 🚀 Installation and Project Initialization
