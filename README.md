@@ -45,7 +45,3 @@ If you find any issues or errors in the documentation, please report them by ope
 - [Flutter Bond](https://github.com/onestudio-co/flutter-bond)
 - [Bond Core](https://github.com/onestudio-co/bond-core)
 - [Bond CLI](https://github.com/onestudio-co/bond-cli)
-
----
-
-Feel free to adjust this template as needed, adding or removing sections to better fit your project's needs. Make sure to update the placeholder links with the actual links to your related repositories.
