@@ -35,6 +35,8 @@ Bond CLI provides a streamlined process for setting up new projects via an inter
  
    ```bash
    ✔ Enter Project Name: · fahman
+   ✔ Enter IOS Bundle Id: · fahman
+   ✔ Enter Android Application Id: · fahman
    ... [Output shortened for clarity]
    🎉  Successfully executed Flutter Pub get for 'fahman'!
    ```
@@ -49,7 +51,7 @@ Alternatively, you can initiate your project using a template from the Flutter B
 
 Flutter Bond provides an `env.example.json` template. Make a copy and update it with your specific environment data. This is vital for configuring aspects like API keys.
 
-For in-depth configuration regarding environment variables, consult the `environment.md` in the root directory.
+For in-depth configuration regarding environment variables, consult the [environment.md](environment.md)  in the root directory.
 
 ## 🔥 Firebase Integration
 
