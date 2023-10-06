@@ -101,7 +101,11 @@ void main() => run(
 
 ### 🛡️ Service Providers
 
-Bootstrap core functionalities using Bond's service providers. Here's a sample configuration in `app.dart`:
+Service Providers are the backbone of Bond, streamlining dependency management and making sure each feature or module of your app has its dependencies clearly defined and easily accessible.
+
+In your Flutter Bond application, the `service_provider.md` offers a comprehensive guide on setting up and managing these Service Providers for your project. Each feature or module you add should ideally have its dedicated Service Provider to ensure modularity and clarity in your code.
+
+To get started, here's a snapshot of how you can configure Service Providers in your `app.dart`:
 
 ```dart
 final List<ServiceProvider> providers = [
@@ -109,13 +113,17 @@ final List<ServiceProvider> providers = [
   FirebaseServiceProvider(),
   AppServiceProvider(),
   AuthServiceProvider(),
-  // Additional providers...
+  // ... add other core providers as needed
   
   // Module Service Providers
   PostServiceProvider(),
-  // Additional providers...
+  // ... add other module-specific providers as you expand your app's features
 ];
 ```
+
+This list will be the central point where all your app's services get registered. As your application grows and evolves, keep this list updated with the respective Service Providers to ensure smooth dependency injections and access throughout your application.
+
+For a deep dive into crafting, managing, and understanding the nuances of Service Providers, refer to the detailed [Service Provider Guide](./service_provider.md).
 
 ## 📚 Bond Ecosystem Overview
 
