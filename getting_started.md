@@ -34,6 +34,7 @@ Bond CLI provides a streamlined process for setting up new projects via an inter
    Launch the command below and respond to the prompts.
  
    ```bash
+   bond create project
    ✔ Enter Project Name: · fahman
    ✔ Enter IOS Bundle Id: · fahman
    ✔ Enter Android Application Id: · fahman
