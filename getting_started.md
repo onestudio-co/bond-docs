@@ -73,20 +73,29 @@ Benefit from Flutter Bond's tight integration with Firebase through the [flutter
 3. **Configure Flutterfire**:
    - Install the flutterfire CLI:
      ```bash
-     dart pub global activate flutterfire_flavor_cli
-     ```
-   - Initialize flutterfire for your project:
-     ```bash
-     flutterfire configure
-     ```
-   - Ensure the `firebase_options_staging.dart` file is imported.
-   - Run the commands:
-     ```bash
-     flutter clean
-     flutter pub get
+     dart pub global activate flutterfire_flavor
      ```
 
-Execute your project post-configuration to validate the Firebase integration.
+   - **Update Configuration Variables**:
+     The configuration script `configure_firebase.sh` is included in the project files. Before running the script, update the following variables in the script to match your Firebase project details:
+
+     - `PROJECT_ID_PRODUCTION`: Firebase project ID for production
+     - `ANDROID_PACKAGE_NAME_PRODUCTION`: Android package name for production
+     - `IOS_BUNDLE_ID_PRODUCTION`: iOS bundle ID for production
+     - `MACOS_BUNDLE_ID_PRODUCTION`: macOS bundle ID for production
+     - `WEB_APP_ID_PRODUCTION`: Web app ID for production
+     - `PROJECT_ID_STAGING`: Firebase project ID for staging
+     - `ANDROID_PACKAGE_NAME_STAGING`: Android package name for staging
+     - `IOS_BUNDLE_ID_STAGING`: iOS bundle ID for staging
+     - `MACOS_BUNDLE_ID_STAGING`: macOS bundle ID for staging
+     - `WEB_APP_ID_STAGING`: Web app ID for staging
+
+   - **Run the Configuration Script**:
+     ```bash
+     chmod +x configure_firebase.sh
+     ./firebase_config.bash
+     
+    Rerun your project to validate that the Firebase integration is complete.
 
 ## 🚪 App Entry Point
 
