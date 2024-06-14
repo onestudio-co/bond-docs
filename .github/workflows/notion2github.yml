@@ -15,7 +15,7 @@ jobs:
         uses: younho9/notion2github@v1.1.0
         with:
           database-url: 'https://www.notion.so/Bond-Docs-4daf9cafdb9f492a9d4e8331b040579a'
-          docs-directory: ""
+          docs-directory: "/"
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
