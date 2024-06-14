@@ -768,6 +768,384 @@ final pinCodeField = TextFieldState(
 In this example, `pinCodeField` should be a number with 4 to 6 digits.
 This covers all the validation rules in the `Rules` class. Note that the power of these rules comes from combining them to create complex validation scenarios for your form fields. Happy form building!
 
+---
+
+## Helper Extensions
+
+### Introduction
+
+Helper extensions provide convenient methods for interacting with form states and controllers in a type-safe and readable manner. They enhance the usability and maintainability of your form handling code.
+
+### Benefits
+
+1. **Type Safety**: Ensures that interactions with form fields are type-safe, reducing runtime errors.
+2. **Convenience**: Simplifies common operations such as retrieving and updating form field values.
+3. **Readability**: Improves code readability and maintainability by abstracting common patterns.
+
+### Accessing and Updating Values 
+
+Without these extensions, updating form fields involves directly manipulating the form state, which can be cumbersome and error-prone due to the required generic type specifications.
+
+#### Example: TextFieldState
+
+```dart
+// Without extension methods
+// Get Value of TextFieldState
+final value = formState.get<TextFieldState>('fieldName').value;
+
+// Update Value of TextFieldState
+formController.update<TextFieldState, String?>('fieldName', 'new value');
+```
+
+#### Example: DropDownFieldState
+
+```dart
+// Without extension methods
+// Get Value of DropDownFieldState
+final value = formState.get<DropDownFieldState<User>, User>('fieldName').value;
+
+// Update Value of DropDownFieldState
+formController.update<DropDownFieldState<User>, User>('fieldName', user);
+```
+
+### Using Extension Methods
+
+With the `XFormController` and `ValueBondFormState` extensions, these operations become straightforward, hiding the complexity of type specifications:
+
+#### Example: TextFieldState
+
+```dart
+// With extension methods
+// Get Value of TextFieldState
+final value = state.textFieldValue('fieldName');
+
+// Update Value of TextFieldState
+controller.updateText('fieldName', 'new value');
+```
+
+#### Example: DropDownFieldState
+
+```dart
+// With extension methods
+// Get Value of DropDownFieldState
+final value = state.dropDownValue<User>('fieldName');
+
+// Update Value of DropDownFieldState
+controller.updateDropDown<User>('fieldName', user);
+```
+
+### Extension Methods for FormController
+
+The `XFormController` extension adds methods to `FormController` to simplify updating the values of various form fields in a type-safe manner.
+
+#### Methods and Usage Examples
+
+##### updateText
+
+Updates a `TextFieldState` with a given value.
+
+```dart
+controller.updateText('fieldName', 'new value');
+```
+
+##### updateCheckbox
+
+Updates a `CheckboxFieldState` with a given value.
+
+```dart
+controller.updateCheckbox('fieldName', true);
+```
+
+##### updateCheckboxGroup
+
+Updates a `CheckboxGroupFieldState` with a given value.
+
+```dart
+controller.updateCheckboxGroup<String>('fieldName', {'value1', 'value2'});
+```
+
+##### toggleCheckbox
+
+Toggles the value of a specific checkbox within a checkbox group.
+
+```dart
+controller.toggleCheckbox<String>('fieldName', value: 'value1', selected: true);
+```
+
+##### updateDate
+
+Updates a `DateFieldState` with a given value.
+
+```dart
+controller.updateDate('fieldName', DateTime.now());
+```
+
+##### updateDropDown
+
+Updates a `DropDownFieldState` with a given value.
+
+```dart
+controller.updateDropDown<String>('fieldName', 'new value');
+```
+
+##### updateAsyncDropDown
+
+Updates an `AsyncDropDownFieldState` with a given value.
+
+```dart
+controller.updateAsyncDropDown<String>('fieldName', 'new value');
+```
+
+##### updateRadioButton
+
+Updates a `RadioButtonFieldState` with a given value.
+
+```dart
+controller.updateRadioButton<String>('fieldName', 'new value');
+```
+
+##### updateRadioGroup
+
+Updates a `RadioGroupFieldState` with a given value.
+
+```dart
+controller.updateRadioGroup<String>('fieldName', 'new value');
+```
+
+##### updateHiddenField
+
+Updates a `HiddenFieldState` with a given value.
+
+```dart
+controller.updateHiddenField<String>('fieldName', 'hidden value');
+```
+
+### Extension Methods for BondFormState
+
+The `FieldBondFormState` extension adds methods to `BondFormState` to simplify retrieving field states from the form state.
+
+#### Methods and Usage Examples
+
+##### textField
+
+Retrieves the state of a text field.
+
+```dart
+final phoneNumberFieldState = state.textField('phoneNumber');
+```
+
+##### radioGroup
+
+Retrieves the state of a radio group field.
+
+```dart
+final radioGroupFieldState = state.radioGroup<String>('radioGroupFieldName');
+```
+
+##### radioButtonsOf
+
+Retrieves a list of radio button states.
+
+```dart
+final radioButtons = state.radioButtonsOf<String>('radioGroupFieldName');
+```
+
+##### checkbox
+
+Retrieves the state of a checkbox field.
+
+```dart
+final checkboxFieldState = state.checkbox('checkboxFieldName');
+```
+
+##### checkboxGroup
+
+Retrieves the state of a checkbox group field.
+
+```dart
+final checkboxGroupFieldState = state.checkboxGroup<String>('checkboxGroupFieldName');
+```
+
+##### checkboxesOf
+
+Retrieves a list of checkbox states.
+
+```dart
+final checkboxes = state.checkboxesOf<String>('checkboxGroupFieldName');
+```
+
+##### dropDownField
+
+Retrieves the state of a dropdown field.
+
+```dart
+final dropDownFieldState = state.dropDownField<String>('dropdownFieldName');
+```
+
+##### dropDownItems
+
+Retrieves a list of dropdown items.
+
+```dart
+final dropDownItems = state.dropDownItems<String>('dropdownFieldName');
+```
+
+##### asyncDropDownField
+
+Retrieves the state of an async dropdown field.
+
+```dart
+final asyncDropDownFieldState = state.asyncDropDownField<String>('asyncDropdownFieldName');
+```
+
+##### asyncDropDownItems
+
+Retrieves a list of async dropdown items.
+
+```dart
+final asyncDropDownItems = state.asyncDropDownItems<String>('asyncDropdownFieldName');
+```
+
+##### hiddenField
+
+Retrieves the state of a hidden field.
+
+```dart
+final hiddenFieldState = state.hiddenField<String>('hiddenFieldName');
+```
+
+### Extension Methods for Retrieving Values
+
+The `ValueBondFormState` extension adds methods to `BondFormState` to simplify retrieving values from form fields.
+
+#### Methods and Usage Examples
+
+##### textFieldValue
+
+Retrieves the value of a text field.
+
+```dart
+final phoneNumber = state.textFieldValue('phoneNumber');
+```
+
+##### radioGroupValue
+
+Retrieves the value of a radio group field.
+
+```dart
+final selectedRadioValue = state.radioGroupValue<String>('radioGroupFieldName');
+```
+
+##### checkboxValue
+
+Retrieves the value of a checkbox field.
+
+```dart
+final isChecked = state.checkboxValue('checkboxFieldName');
+```
+
+##### checkboxValues
+
+Retrieves the selected values of a checkbox group.
+
+```dart
+final selectedCheckboxValues = state.checkboxValues<String>('checkboxGroupFieldName');
+```
+
+##### checkboxGroupValue
+
+Retrieves the first selected value of a checkbox group.
+
+```dart
+final firstSelectedCheckboxValue = state.checkboxGroupValue<String>('checkboxGroupFieldName');
+```
+
+##### checkboxSelected
+
+Checks if a specific value is selected within a checkbox group.
+
+```dart
+final isValueSelected = state.checkboxSelected('checkboxGroupFieldName', 'specificValue');
+```
+
+##### dropDownValue
+
+Retrieves the selected value of a dropdown field.
+
+```dart
+final selectedDropdownValue = state.dropDownValue<String>('dropdownFieldName');
+```
+
+##### asyncDropDownValue
+
+Retrieves the selected value of an async dropdown field.
+
+```dart
+final selectedAsyncDropdownValue = state.asyncDropDownValue<String>('asyncDropdownFieldName');
+```
+
+##### hiddenFieldValue
+
+Retrieves the value of a hidden field.
+
+```dart
+final hiddenValue = state.hiddenFieldValue<String>('hiddenFieldName');
+```
+
+### Ensuring Required Form Field Values
+
+The `RequiredValues` class provides methods to retrieve the values of various form fields while ensuring that the values are not null. If a field's value is null, an `ArgumentError` is thrown.
+
+#### Methods and Usage Examples
+
+##### textFieldValue
+
+Ensures the value of a text field is not null.
+
+```dart
+final phoneNumber = state.required().textFieldValue('phoneNumber');
+```
+
+##### radioGroupValue
+
+Ensures the value of a radio group field is not null.
+
+```dart
+final selectedRadioValue = state.required().radioGroupValue<String>('radioGroupFieldName');
+```
+
+##### checkboxGroupValue
+
+Ensures the first selected value of a checkbox group is not null.
+
+```dart
+final firstSelectedCheckboxValue = state.required().checkboxGroupValue<String>('checkboxGroupFieldName');
+```
+
+##### dropDownValue
+
+Ensures the value of a dropdown field is not null.
+
+```dart
+final selectedDropdownValue = state.required().dropDownValue<String>('dropdownFieldName');
+```
+
+##### asyncDropDownValue
+
+Ensures the value of an async dropdown field is not null.
+
+```dart
+final selectedAsyncDropdownValue = state.required().asyncDropDownValue<String>('asyncDropdownFieldName');
+```
+
+##### hiddenFieldValue
+
+Ensures the value of a hidden field is not null.
+
+```dart
+final hiddenValue = state.required().hiddenFieldValue<String>('hiddenFieldName');
+```
+
 ## Creating Custom FormFieldState
 
 You can also create your own custom `FormFieldState` subclasses to manage the state of custom form
@@ -883,171 +1261,8 @@ This allows you to add any custom validation logic to your forms, ensuring that 
 
 ## Example: Login Form
 
-In this example, we'll create a simple login form in Flutter using the `LoginFormController` and `LoginPage`.
-
-### LoginFormController
-
-The `LoginFormController` is responsible for managing the login form's state and handling form submission. Here's the code for the `LoginFormController`:
-
-```dart
-
-import 'dart:developer';
-
-import 'package:bond_form/bond_form.dart';
-import 'package:bond_form_riverpod/bond_form_riverpod.dart';
-import 'package:example/features/auth/data/errors/account_not_found_error.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-class LoginFormController extends FormStateNotifier<String, Error> {
-  @override
-  Map<String, FormFieldState> fields() =>
-          {
-            'email': TextFieldState(
-              null,
-              label: 'Email',
-              rules: [
-                Rules.required(),
-                Rules.email(),
-              ],
-            ),
-            'password': TextFieldState(
-              null,
-              label: 'Password',
-              rules: [
-                Rules.required(),
-                Rules.minLength(6),
-                Rules.alphaNum(),
-              ],
-            ),
-          };
-
-  @override
-  Future<String> onSubmit() async {
-    final email = state
-            .get('email')
-            .value;
-    final password = state
-            .get('password')
-            .value;
-    log('email: $email, password: $password');
-    await Future.delayed(const Duration(seconds: 1));
-    if (email != 'salahnahed@icloud.com') {
-      throw AccountNotFoundError();
-    }
-    return 'Success';
-  }
-}
-
-final loginProvider =
-NotifierProvider<LoginFormController, BondFormState<String, Error>>(
-  LoginFormController.new,
-);
-
-```
-
-### LoginPage
-
-The `LoginPage` is a Flutter widget that utilizes the `LoginFormController` to build a login form. Here's the code for the `LoginPage`:
-
-```dart
-
-import 'package:bond_form/bond_form.dart';
-import 'package:example/features/auth/presentations/providers/login_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-class LoginPage extends ConsumerWidget {
-  const LoginPage({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final formState = ref.watch(loginProvider);
-    ref.listen(
-      loginProvider,
-              (previous, next) => _formStateListener(context, previous, next),
-    );
-    return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          children: [
-            TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              onChanged: (value) =>
-                      ref.read(loginProvider.notifier).update('email', value),
-              decoration: InputDecoration(
-                labelText: formState.label('email'),
-                errorText: formState.error('email'),
-                prefixIcon: const Icon(Icons.email),
-              ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              onChanged: (value) =>
-                      ref.read(loginProvider.notifier).update('password', value),
-              decoration: InputDecoration(
-                labelText: formState.label('password'),
-                errorText: formState.error('password'),
-                prefixIcon: const Icon(Icons.lock),
-              ),
-            ),
-            const SizedBox(height: 16),
-            if (formState.status == BondFormStateStatus.submitting)
-              const CircularProgressIndicator()
-            else
-              MaterialButton(
-                onPressed: ref
-                        .read(loginProvider.notifier)
-                        .submit,
-                height: 48,
-                color: formState.status == BondFormStateStatus.invalid
-                        ? Colors.red
-                        : Colors.blueAccent,
-                child: const Text(
-                  'Login',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              )
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _formStateListener(BuildContext context,
-          BondFormState<String, Error>? previous,
-          BondFormState<String, Error> next,) {
-    switch (next.status) {
-      case BondFormStateStatus.submitted:
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Submitted'),
-            backgroundColor: Colors.green,
-          ),
-        );
-        break;
-      case BondFormStateStatus.failed:
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(next.failure.toString()),
-            backgroundColor: Colors.red,
-          ),
-        );
-        break;
-      default:
-        break;
-    }
-  }
-}
-
-```
+For a complete example of a login form, refer to the [login example in the repository](https://github.com/onestudio-co/bond-core/tree/main/packages/form/packages/bond_form_riverpod/example/lib/features/auth).
 
 ## Example: Order a Pizza Form
 
-(Provide example code of an order a pizza form using Form Bond
+For a complete example of an order a pizza form, refer to the [order a pizza example in the repository](https://github.com/onestudio-co/bond-core/tree/main/packages/form/packages/bond_form_riverpod/example/lib/features/pizza/presentations).
