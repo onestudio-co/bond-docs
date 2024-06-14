@@ -4,3 +4,8 @@
 .obsidian/appearance.json
 .obsidian/core-plugins-migration.json
 .obsidian/app.json
+.obsidian/community-plugins.json
+.obsidian/hotkeys.json
+.obsidian/plugins/obsidian-plugin-toc/data.json
+.obsidian/plugins/obsidian-plugin-toc/main.js
+.obsidian/plugins/obsidian-plugin-toc/manifest.json
