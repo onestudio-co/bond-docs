@@ -14,7 +14,7 @@ any use case.
 - [Why Create Form Bond?](#why-create-form-bond)
 - [Getting Started](#getting-started)
 - [Form Bond Riverpod](#form-bond-riverpod)
-	- [Core Components:](#core-components)
+	- [Core Components](#core-components)
 		- [FormStateNotifier](#formstatenotifier)
 		- [AutoDisposeFormStateNotifier](#autodisposeformstatenotifier)
 		- [FamilyFormStateNotifier](#familyformstatenotifier)
@@ -29,12 +29,12 @@ any use case.
 	- [AsyncDropDownFieldState](#asyncdropdownfieldstate)
 	- [HiddenFieldState](#hiddenfieldstate)
 - [ValidationRule](#validationrule)
-	- [Required:](#required)
-	- [Email:](#email)
-	- [MaxLength and MinLength:](#maxlength-and-minlength)
-	- [RequiredIf:](#requiredif)
-	- [MinValue and MaxValue:](#minvalue-and-maxvalue)
-	- [InList:](#inlist)
+	- [Required](#required)
+	- [Email](#email)
+	- [MaxLength and MinLength](#maxlength-and-minlength)
+	- [RequiredIf](#requiredif)
+	- [MinValue and MaxValue](#minvalue-and-maxvalue)
+	- [InList](#inlist)
 	- [Integer](#integer)
 	- [NotInList](#notinlist)
 	- [Numeric](#numeric)
@@ -150,7 +150,7 @@ If you want to use Form Bond with Riverpod, you can do so by using the `bond_for
 
 This package provides a set of Riverpod providers that integrate smoothly with Form Bond.
 
-### Core Components:
+### Core Components
 
 #### FormStateNotifier
 
@@ -363,7 +363,7 @@ as `Required`, `Email`, `Numeric`, and `MinLength`, among others.
 Great, you've done quite a job implementing these rules. Let's dive into some examples of real-world
 use cases for these rules.
 
-### Required:
+### Required
 
 Ensuring that a user fills out all necessary fields in a form, such as a
 registration form where a user must enter their username, email, and password.
@@ -376,7 +376,7 @@ registration form where a user must enter their username, email, and password.
 );
  ```
 
-### Email:
+### Email
 
 Verifying that a user enters a valid email in an email field. This can be used in a
 login form or registration form.
@@ -390,7 +390,7 @@ final emailField = TextFieldState(
 );
    ```
 
-### MaxLength and MinLength:
+### MaxLength and MinLength
 
 Enforcing a character limit on a text field. This can be used in a
 username field where you might want a minimum and maximum character limit.
@@ -404,7 +404,7 @@ final usernameField = TextFieldState(
 );
 ```
 
-### RequiredIf:
+### RequiredIf
 
 Checking that a field is filled out only if a condition is met. For example,
 if a user chooses "other" in a dropdown, you might want them to fill out an explanation
@@ -451,7 +451,7 @@ final otherExplanationField = TextFieldState(
 );
 ```
 
-### MinValue and MaxValue:
+### MinValue and MaxValue
 
 Enforcing numeric limits on a field. This could be used in a form
 where a user enters their age, and you want to ensure they are between certain ages.
@@ -465,7 +465,7 @@ final ageField = TextFieldState(
 );
  ```
 
-### InList:
+### InList
 
 Ensuring the selected value is within a list of valid values. This can be used with a
 dropdown field.
