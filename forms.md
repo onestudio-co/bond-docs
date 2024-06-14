@@ -12,11 +12,10 @@ any use case.
 
 ## Index
 
-- [Why Create Form Bond?](#why-create-form-bond)
+- [Why Create Form Bond?](#why-create-form-bond?)
 - [Form Bond Riverpod](#form-bond-riverpod)
 - [Getting Started](#getting-started)
 - [Bond Form Riverpod](#river_form_bond)
-- [Create Your Custom State Management from Form Bond](#create-your-custom-state-management-from-form-bond)
 - [FormFieldState](#formfieldstate)
   - [TextFieldState](#textfieldstate)
   - [CheckboxFieldState](#checkboxfieldstate)
@@ -59,6 +58,7 @@ any use case.
 - [Creating Custom ValidationRule](#creating-custom-validationrule)
 - [Example: Login Form](#example-login-form)
 - [Example: Order a Pizza Form](#example-order-a-pizza-form)
+- [Create Your Custom State Management from Form Bond](#create-your-custom-state-management-from-form-bond)
 
 ## Why Create Form Bond?
 
@@ -85,6 +85,7 @@ solution for Flutter. Riverpod allows for robust state management and combines w
 strong form handling capabilities.
 
 If you want to use Form Bond with Riverpod, you can do so by using the `bond_form_riverpod` package.
+
 This package provides a set of Riverpod providers that integrate smoothly with Form Bond.
 
 ### Core Components:
@@ -113,11 +114,33 @@ class MyAutoDisposeFormStateNotifier extends AutoDisposeFormStateNotifier<String
 }
 ```
 
-## Create Your Custom State Management from Form Bond
+#### FamilyFormStateNotifier
 
-Form Bond allows you to create your own custom state management system based on its foundational
-components. This provides the flexibility to manage your form state in the way that best suits your
-application's needs.
+A class to manage form state, extending a notifier to notify its subscribers of changes, and using the `FormController` mixin for form operations.
+
+Example:
+
+```dart
+class MyFamilyFormStateNotifier extends FamilyFormStateNotifier<String, MyError, FamilyArg> {
+  // Implement required methods...
+}
+```
+
+#### AutoDisposeFamilyFormStateNotifier
+
+`AutoDisposeFamilyFormStateNotifier` is an abstract class that manages the form state. It extends `AutoDisposeFamilyNotifier` to automatically manage resources and provide argument support, and uses the `FormController` mixin to provide functionalities related to form management.
+
+This class is intended to be used as the foundation for creating form-based state management solutions that need automatic resource cleanup.
+
+Example:
+
+```dart
+class MyAutoDisposeFamilyFormStateNotifier extends AutoDisposeFamilyFormStateNotifier<String, MyError, FamilyArg> {
+  // Implement required methods...
+  
+}
+```
+
 
 ## FormFieldState
 
@@ -1266,3 +1289,8 @@ For a complete example of a login form, refer to the [login example in the repos
 ## Example: Order a Pizza Form
 
 For a complete example of an order a pizza form, refer to the [order a pizza example in the repository](https://github.com/onestudio-co/bond-core/tree/main/packages/form/packages/bond_form_riverpod/example/lib/features/pizza/presentations).
+
+
+## Create Your Custom State Management from Form Bond
+
+Form Bond allows you to create your own custom state management system based on its foundational components. This provides the flexibility to manage your form state in the way that best suits your application's needs.
