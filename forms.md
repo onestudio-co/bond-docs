@@ -826,8 +826,60 @@ rule to 5.
 
 ## Creating Custom ValidationRule
 
-Form Bond allows for the creation of custom validation rules by subclassing `ValidationRule`. This
-enables you to define any form field validation logic that your application needs.
+Form Bond allows for the creation of custom validation rules by subclassing `ValidationRule`. This enables you to define any form of field validation logic that your application needs.
+
+### Example: Creating a Custom Validation Rule
+
+Let's create a custom validation rule that checks if a text field contains a specific keyword.
+
+```dart
+import 'package:bond_form/bond_form.dart';
+
+/// A custom validation rule that checks if a text field contains a specific keyword.
+class ContainsKeywordRule extends ValidationRule<String> {
+  final String keyword;
+
+  /// Creates a new instance of [ContainsKeywordRule].
+  ///
+  /// - [keyword] The keyword that the field value must contain.
+  /// - [_message] A custom validation message provided by the user (optional).
+  ContainsKeywordRule(this.keyword, [String? message]) : super(message);
+
+  @override
+  String validatorMessage(String fieldName) {
+    return 'The $fieldName must contain the keyword "$keyword".';
+  }
+
+  @override
+  bool validate(String value, Map<String, FormFieldState> fields) {
+    return value.contains(keyword);
+  }
+}
+
+// Example usage of the custom validation rule
+final keywordField = TextFieldState(
+  '',
+  label: 'Keyword',
+  rules: [ContainsKeywordRule('Flutter', 'Must include "Flutter"')],
+);
+```
+
+### Explanation
+
+1. **Subclassing `ValidationRule`**:
+   - We create a class `ContainsKeywordRule` that extends `ValidationRule<String>`.
+   - This class takes a keyword and an optional custom message as parameters.
+
+2. **Implementing `validatorMessage`**:
+   - The `validatorMessage` method provides a default validation message if a custom message is not provided.
+
+3. **Implementing `validate`**:
+   - The `validate` method checks if the value contains the specified keyword.
+
+4. **Using the Custom Rule**:
+   - We create a `TextFieldState` and apply the `ContainsKeywordRule` to it.
+
+This allows you to add any custom validation logic to your forms, ensuring that the data collected meets your specific requirements.
 
 ## Example: Login Form
 
