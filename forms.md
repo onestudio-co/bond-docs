@@ -239,6 +239,30 @@ final newsletterSubscriptionField = RadioGroupFieldState<bool>(
 For the radio group field state, we use `Rules.required()`. This means a selection must be made from
 the group of radio buttons.
 
+### AsyncDropDownFieldState
+
+Manages the state of a dropdown input field with items that are loaded asynchronously.
+
+```dart
+final asyncCountryField = AsyncDropDownFieldState<String?>(
+  null,
+  items: fetchCountries(),
+  label: 'Country',
+  rules: [Rules.required()],
+);
+
+Future<List<DropDownItemState<String>>> fetchCountries() async {
+  // Simulate a network call to fetch countries
+  await Future.delayed(Duration(seconds: 2));
+  return [
+    DropDownItemState('us', label: 'United States'),
+    DropDownItemState('ca', label: 'Canada'),
+    DropDownItemState('uk', label: 'United Kingdom'),
+  ];
+}
+```
+
+
 ## ValidationRule
 
 ValidationRule is a key concept in Form Bond. Each ValidationRule defines a specific validation
