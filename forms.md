@@ -262,7 +262,13 @@ Future<List<DropDownItemState<String>>> fetchCountries() async {
 }
 ```
 
+### HiddenFieldState
 
+Manages the state of a hidden input field. This is useful for including data in forms that users do not need to see or interact with directly.
+
+```dart
+final userId = HiddenFieldState<Int>('user_id');
+```
 ## ValidationRule
 
 ValidationRule is a key concept in Form Bond. Each ValidationRule defines a specific validation
