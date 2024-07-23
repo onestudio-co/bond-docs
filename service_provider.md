@@ -1,4 +1,3 @@
-
 # Flutter Service Provider Guide
 
 Service Providers in Flutter Bond offer an innovative and structured approach to managing dependencies. This README is a comprehensive guide on how to leverage Service Providers for effective dependency management in your Flutter applications.
@@ -36,24 +35,21 @@ Service Providers in Flutter Bond make use of GetIt, a service locator for Dart 
 
 ## Model Serialization in a Service Provider
 
-Within a Service Provider, you can define how to convert a model from JSON to an object using the `responseConvert` method.
+Within a Service Provider, you can define how to convert a model from JSON to an object using the `factories` map. This approach centralizes the conversion logic, reducing boilerplate code and making it easier to maintain and scale.
 
 Example:
 
 ```dart
-class PackagesServiceProvider extends ServiceProvider {
+class PackagesServiceProvider extends ServiceProvider with ResponseDecoding {
   @override
-  T? responseConvert<T>(Map<String, dynamic> json) {
-    if (T == Package) {
-      return Package.fromJson(json) as T;
-    }
-    // ... other model conversions
-    return null;
-  }
+  Map<Type, JsonFactory> get factories => {
+    Package: (json) => Package.fromJson(json),
+    // Add other model factories as needed...
+  };
 }
 ```
 
-The `ResponseConverter` class leverages all registered service providers and utilizes the `responseConvert` method to translate the JSON object to the corresponding model.
+The `ResponseDecoding` mixin leverages the `factories` map to translate JSON objects into their corresponding models.
 
 Certainly! Let's consider the `auth` (authentication) feature as a real-world example:
 
@@ -105,7 +101,7 @@ auth/
 
 auth_service_provider.dart
 ```dart
-class AuthServiceProvider extends ServiceProvider {
+class AuthServiceProvider extends ServiceProvider with ResponseDecoding {
   
   // Register all the services, models, APIs related to authentication
   @override
@@ -121,14 +117,11 @@ class AuthServiceProvider extends ServiceProvider {
 
   // If you need any specific conversions for auth models from JSON
   @override
-  T? responseConvert<T>(Map<String, dynamic> json) {
-    if (T == UserModel) {
-      return UserModel.fromJson(json) as T;
-    } else if (T == TokenModel) {
-      return TokenModel.fromJson(json) as T;
-    }
-    return null;
-  }
+  Map<Type, JsonFactory> get factories => {
+    UserModel: (json) => UserModel.fromJson(json),
+    TokenModel: (json) => TokenModel.fromJson(json),
+    // Add other model factories as needed...
+  };
 }
 ```
 
@@ -173,3 +166,7 @@ We aim to employ code-generation tools to further automate the Service Provider 
 
 - [JsonSerializable Package Documentation](https://pub.dev/packages/json_serializable)
 - [Flutter Official Documentation on JSON & Serialization](https://docs.flutter.dev/data-and-backend/serialization/json)
+
+---
+
+This updated guide reflects the new changes and provides clear instructions on how to implement the `ResponseDecoding` mixin and the `factories` map for JSON serialization within service providers.
