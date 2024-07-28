@@ -73,7 +73,7 @@ Benefit from Flutter Bond's tight integration with Firebase through the [flutter
 3. **Configure Flutterfire**:
    - Install the flutterfire CLI:
      ```bash
-     dart pub global activate flutterfire_flavor
+     dart pub global activate flutterfire_cli
      ```
 
    - **Update Configuration Variables**:
