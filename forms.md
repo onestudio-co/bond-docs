@@ -1344,6 +1344,76 @@ final keywordField = TextFieldState(
 
 This allows you to add any custom validation logic to your forms, ensuring that the data collected meets your specific requirements.
 
+### Automatic Request Body Generation with `BodyConvertible`
+
+#### Overview
+
+The `BodyConvertible` mixin simplifies the process of extracting and transforming form field values into a format suitable for API requests. By implementing this mixin, you can automatically generate a map of key-value pairs representing the form state, which can be directly used as a request body.
+
+#### How It Works
+
+When you mix `BodyConvertible` into your form controller, it provides a `body()` method that generates a map from the form state. This method iterates over all form fields, applying any custom transformers you've registered, and returns a map that can be sent directly to an API or used elsewhere in your application.
+
+#### Key Components
+
+- **`body()` Method**: Generates a map from the form state, applying any necessary transformations to field values.
+- **`TransformersRegistry`**: Allows you to register custom transformers for specific field types, converting them into the appropriate format for the request body.
+- **Custom Transformers**: You can register transformers to handle specific types of form field values, such as converting enums to strings or serializing collections like `Set` or `List`.
+
+#### Usage Example
+
+Here's a basic example of how to use `BodyConvertible` in your form controller:
+
+```dart
+import 'body_convertible.dart';
+import 'transformers_registry.dart';
+import 'field_transformer.dart';
+
+class PizzaOrderFormController extends AutoDisposeFormStateNotifier<Order, Error>
+    with BodyConvertible<String, Error> {
+
+  @override
+  void fieldTransformers(TransformersRegistry registry) {
+    registry.register<CrustType, String>((CrustType value) => value.name);
+    registry.register<PizzaSize, String>((value) => value.name ?? '');
+    registry.register<Set<Toppings>, String>(
+      (value) => value.map((value) => value.name).join(','),
+    );
+  }
+
+  @override
+  Future<Order> onSubmit() async {
+    // Generate the body map using the body() method
+    final bodyData = body();
+
+    // Use the generated body data for an API request or further processing
+	....
+  }
+}
+```
+
+#### Registering Transformers
+
+To ensure the `body()` method correctly transforms your form field values, you need to register custom transformers in the `fieldTransformers()` method of your form controller. Here's an example:
+
+```dart
+@Override
+void fieldTransformers(TransformersRegistry registry) {
+  registry.register<CrustType, String>((CrustType value) => value.name);
+  registry.register<PizzaSize, String>((value) => value.name);
+}
+```
+
+#### Benefits
+
+- **Simplified Code**: Reduces boilerplate by automatically handling form field extraction and transformation.
+- **Flexible Transformation**: Easily convert complex data types into formats suitable for API requests using custom transformers.
+- **Reusability**: The `BodyConvertible` mixin can be reused across different form controllers, making it a versatile tool in your toolkit.
+
+**Conclusion**
+
+The BodyConvertible mixin streamlines the process of generating request bodies from form state, making it easier to work with complex forms in your Bond Form-based applications. By using the body() method and registering necessary transformers, you can efficiently prepare data for submission to APIs or other external services.
+
 ## Example: Login Form
 
 For a complete example of a login form, refer to the [login example in the repository](https://github.com/onestudio-co/bond-core/tree/main/packages/form/packages/bond_form_riverpod/example/lib/features/auth).
