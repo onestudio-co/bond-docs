@@ -1,0 +1,75 @@
+site_name: Flutter Bond
+site_description: Official documentation for Flutter Bond and Bond Core
+site_url: https://example.com/docs
+repo_url: https://github.com/onestudio-co/flutter-bond
+edit_uri: ''
+
+# Use current folder as docs directory to keep existing Markdown files working
+docs_dir: .
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - toc.follow
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  icon:
+    logo: material/link-variant
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - footnotes
+  - def_list
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: false
+
+nav:
+  - Prologue:
+      - prologue/index.md
+  - Getting Started:
+      - getting_started.md
+      - environment.md
+      - firebase.md
+      - flavors.md
+  - Architecture Concepts:
+      - service_provider.md
+  - Data & Networking: networking.md
+  - Caching: caching.md
+  - Forms: forms.md
+  - Notifications: notifications.md
+  - User Interface:
+      - themes.md
+      - bond_extentions.md
+      - launcher.md
+
