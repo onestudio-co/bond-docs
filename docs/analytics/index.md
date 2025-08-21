@@ -1,57 +1,48 @@
 
 # Analytics
 
-Track product events with a simple event model and provider adapters.
+Track events with a simple model and provider adapters.
 
-## Events
+## Why
 
-Define events by extending `AnalyticsEvent`:
+- Consistent event semantics across providers
+- System event mixins simplify provider mapping
+
+## TL;DR
+
+- Define events by extending `AnalyticsEvent`
+- Log via `AppAnalytics`
+
+## Steps
+
+1) Define custom or system events
+2) Register providers
+3) Fire events and set user context
+
+## Example
 
 ```dart
-class LoginEvent extends AnalyticsEvent {
-  final int userId;  
-  final String channel;  
-
+class LoginEvent extends AnalyticsEvent with UserLoggedIn {
   LoginEvent({required this.userId, required this.channel});
-
-  @override
-  String get key => 'User Logged In';
-
-  @override
-  Map<String, dynamic> get params => {'channel': channel};
+  final int userId; final String channel;
+  @override String get key => 'User Logged In';
+  @override Map<String, dynamic> get params => {'channel': channel};
 }
-```
 
-Use system-event mixins when available (e.g., `UserLoggedIn`) so providers can map to native calls.
-
-## Providers
-
-Register analytics providers (e.g., Firebase, AppsFlyer) and map system events:
-
-```dart
-class AppsflyerAnalyticsProvider implements AnalyticsProvider {
-  final AppsflyerSdk _appsflyer;
-  AppsflyerAnalyticsProvider(this._appsflyer);
-
-  @override
-  void log(AnalyticsEvent event) {
-    if (event is UserLoggedIn) {
-      _appsflyer.setCustomerUserId(event.id.toString());
-    }
-    _appsflyer.logEvent(event.key, event.params);
-  }
-}
-```
-
-Fire events anywhere:
-
-```dart
 AppAnalytics.setUserId(user.id);
-AppAnalytics.setUserAttributes({'age': user.age});
 AppAnalytics.fire(LoginEvent(userId: user.id, channel: 'apple'));
 ```
 
-## Debugging
+## Deep Dive
 
-- Firebase: enable debug mode (iOS `-FIRDebugEnabled`, Android `adb shell setprop debug.firebase.analytics.app PACKAGE`) and use DebugView.
-- Remember to turn off debug mode after verification.
+- Mapping events in provider implementations
+- Debugging with Firebase DebugView
+
+## Pitfalls
+
+- Missing user id before logging identity events
+- Divergent keys across platforms
+
+## Next Steps
+
+- See Tooling for debugging and logging

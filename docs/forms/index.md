@@ -3,85 +3,44 @@
 
 Reliable, typed form state with validation, helpers, and integrations.
 
-## Overview
+## Why
 
-- Field states: text, checkbox, checkbox group, dropdown, async dropdown, radio group, date, hidden
-- Validation rules: required, email, min/max length, numeric/integer, date before/after, inList, same, size, url, between, boolean, range selected
-- Controllers and helpers for ergonomic reads/updates
-- Integrations: Riverpod (first‑class), plus adapters for other state managers
+- Predictable field states and validation
+- Ergonomic reads and updates
+- Easy adapters for state management
 
-## Quick start
+## TL;DR
 
-```dart
-final email = TextFieldState(
-  '',
-  label: 'Email',
-  rules: [Rules.required(), Rules.email()],
-);
+- Define field states
+- Use helpers to read and update
+- Submit with a controller
 
-final password = TextFieldState(
-  '',
-  label: 'Password',
-  rules: [Rules.required(), Rules.minLength(8)],
-);
+## Steps
 
-final form = BondFormState(fields: {
-  'email': email,
-  'password': password,
-});
-```
+1) Create field states with rules
+2) Group in `BondFormState`
+3) Submit via controller
 
-Update values with helpers:
+## Example
 
 ```dart
+final email = TextFieldState('', rules: [Rules.required(), Rules.email()]);
+final state = BondFormState(fields: {'email': email});
 controller.updateText('email', 'user@example.com');
-final current = state.textFieldValue('email');
 ```
 
-## Riverpod integration
+## Deep Dive
 
-```dart
-class LoginForm extends AutoDisposeFormStateNotifier<String, Error> {
-  LoginForm() : super(BondFormState(fields: {
-    'email': TextFieldState('', rules: [Rules.required(), Rules.email()]),
-    'password': TextFieldState('', rules: [Rules.required(), Rules.minLength(8)]),
-  }));
+- Validation rules: required, email, min/max length, numeric, integer, date before/after, inList, same, size, url, between, boolean, range selected
+- Riverpod controllers and family variants
+- Request body generation via `BodyConvertible`
 
-  @override
-  Future<String> onSubmit() async {
-    final email = state.required().textFieldValue('email');
-    final password = state.required().textFieldValue('password');
-    // call API
-    return 'ok';
-  }
-}
-```
+## Pitfalls
 
-## Validation rules
+- Heavy controllers doing network work directly
+- Missing rules on critical fields
 
-Common rules:
+## Next Steps
 
-- required, email, minLength, maxLength, between
-- numeric, integer, size, same, regex, url
-- inList, notInList, minSelected, maxSelected, rangeSelected
-- date, dateBefore, dateAfter (and string variants)
-
-## Body conversion (requests)
-
-Generate request bodies from form state using `BodyConvertible` and transformers:
-
-```dart
-class OrderForm extends AutoDisposeFormStateNotifier<Order, Error>
-    with BodyConvertible<String, Error> {
-  @override
-  void fieldTransformers(TransformersRegistry registry) {
-    registry.register<PizzaSize, String>((v) => v.name);
-  }
-}
-```
-
-## Recipes
-
-- Login form with error presentation
-- Multi‑step wizard with nested controllers
-- Async dropdown backed by networking
+- See Authentication for form recipes
+- See Data and Networking for submissions

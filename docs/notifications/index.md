@@ -1,53 +1,29 @@
 # Notifications
 
-Beacon unifies push/local notifications with routing and actions.
+Beacon unifies push and local notifications with routing and actions.
 
-## Overview
+## Why
 
-- Providers/channels (e.g., Firebase Messaging)
-- Typed notification classes for routing
-- Optional Notification Center UI
+- Centralized handling for taps and foreground events
+- Typed routing via notification classes
 
-## Setup
+## TL;DR
 
-1) Configure Firebase per flavor (see Getting Started → Firebase)
-2) Register notification Service Provider and channels
+- Configure provider and channel
+- Register typed notifications in a feature provider
 
-```dart
-class NotificationConfig {
-  static var providers = {
-    'push_notification': {
-      'driver': 'push_notification',
-      'class': PushNotificationsProviders,
-      'channels': [
-        {
-          'name': 'firebase_messaging',
-          'class': FirebaseMessagingNotificationProvider,
-        }
-      ],
-    },
-  };
-}
-```
+## Steps
 
-## Routing by type
+1) Configure Firebase
+2) Register notification provider and channels
+3) Add typed notification handlers
 
-Define typed push notifications and handle them centrally:
+## Example
 
 ```dart
 class OrderUpdated extends PushNotification with ActionablePushNotification {
   @override
   List<String> get code => ['order_placed', 'order_update_delivery_status'];
-
-  @override
-  void onNotification(NotificationData data) {
-    // Handle foreground
-  }
-
-  @override
-  void onNotificationTapped(NotificationData data) {
-    // Navigate
-  }
 }
 
 class OrderServiceProvider extends ServiceProvider
@@ -57,6 +33,16 @@ class OrderServiceProvider extends ServiceProvider
 }
 ```
 
-## Actions
+## Deep Dive
 
-Use actionable notifications to present buttons and handle callbacks to update UI or navigate.
+- Creating providers and channels
+- Notification center UI
+
+## Pitfalls
+
+- Missing code mapping in handlers
+- Taps not routed to a single entry point
+
+## Next Steps
+
+- See Guides → Authentication for protected routes on taps

@@ -1,63 +1,48 @@
 
 # Caching
 
-Unified caching with pluggable drivers and ergonomic helpers.
+Unified caching with pluggable drivers and helpers.
 
-## Overview
+## Why
 
-- Drivers: SharedPreferences, in‑memory, custom
-- APIs: get, put, add, forever, forget, clear, increment/decrement
-- Async helpers: remember, rememberForever
-- Object caching via factories or shared `ResponseDecoding`
-- Multiple stores via `Cache.store('name')`
+- Faster apps with fewer requests
+- Consistent object caching via shared factories
 
-## Quick start
+## TL;DR
+
+- Use `Cache.get` and `Cache.put`
+- Cache computations with `remember`
+
+## Steps
+
+1) Choose a driver
+2) Cache values or computations
+3) Use stores for advanced cases
+
+## Example
 
 ```dart
 await Cache.put('greeting', 'hello', expiredAfter: Duration(minutes: 10));
 final value = Cache.get<String>('greeting');
+
+final users = await Cache.remember('users', Duration(minutes: 5), api.fetchUsers);
 ```
 
-Cache computations:
+## Deep Dive
 
-```dart
-final data = await Cache.remember('users', Duration(minutes: 5), () async {
-  return await api.fetchUsers();
-});
-```
+- Drivers: SharedPreferences, InMemory, custom
+- Object caching with `fromJsonFactory` or `ResponseDecoding`
+- Multiple stores via `Cache.store('name')`
 
-## Object caching
+## Pitfalls
 
-Using a factory:
+- Inconsistent cache keys
+- Caching mutable models without immutability
 
-```dart
-final user = Cache.get<User>('user', fromJsonFactory: User.fromJson);
-```
+## Next Steps
 
-Using shared providers:
-
-```dart
-class MyProvider extends ServiceProvider with ResponseDecoding {
-  @override
-  Map<Type, JsonFactory> get factories => {User: User.fromJson};
-}
-```
-
-## Drivers
-
-Built‑in: SharedPreferences, InMemory. Create a custom driver by extending `CacheDriver` and registering it in a Service Provider.
-
-## Stores
-
-```dart
-await Cache.store('in_memory').put('temp', 1);
-final n = Cache.store('in_memory').get<int>('temp');
-```
-
-## Tips
-
-- Prefer `remember` for network results
-- Centralize factories with `ResponseDecoding`
+- See Data and Networking for cache policies
+- See Advanced for custom drivers
 
 
 
