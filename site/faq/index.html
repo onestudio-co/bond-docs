@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://example.com/docs/advanced-topics/">
+        <link rel="canonical" href="https://example.com/docs/faq/">
       
       
-        <link rel="prev" href="../deployment/ci-cd/">
+        <link rel="prev" href="../reference/">
       
       
-        <link rel="next" href="../cookbook/">
+        <link rel="next" href="../glossary/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Index - Flutter Bond</title>
+        <title>FAQ - Flutter Bond</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#advanced-topics" class="md-skip">
+        <a href="#faq" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              FAQ
             
           </span>
         </div>
@@ -1286,8 +1286,6 @@
       
   
   
-    
-  
   
   
     
@@ -1300,11 +1298,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
         
           
           <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
@@ -1320,7 +1320,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Advanced Topics
@@ -1331,32 +1331,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Index
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../advanced-topics/" class="md-nav__link">
         
   
   
@@ -1367,62 +1345,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#extending-bond-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extending Bond packages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-providers-and-middleware" class="md-nav__link">
-    <span class="md-ellipsis">
-      Custom providers and middleware
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1589,10 +1511,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1603,6 +1534,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1645,31 +1577,22 @@
 
 
 
-<h1 id="advanced-topics">Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permanent link">&para;</a></h1>
-<p>Deep dives for extending and hardening your app.</p>
-<h2 id="extending-bond-packages">Extending Bond packages<a class="headerlink" href="#extending-bond-packages" title="Permanent link">&para;</a></h2>
+<h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Add custom cache drivers by extending <code>CacheDriver</code></li>
-<li>Implement notification providers and channels</li>
-<li>Provide analytics providers that map system events</li>
-</ul>
-<h2 id="custom-providers-and-middleware">Custom providers and middleware<a class="headerlink" href="#custom-providers-and-middleware" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Feature Service Providers for APIs, controllers, and model factories</li>
-<li>Dio interceptors for auth, retries, and logging</li>
-<li>Route guards and app‑level middlewares</li>
-</ul>
-<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Cache‑then‑network patterns for perceived latency</li>
-<li>Pagination merging with <code>XListResponse.merge</code></li>
-<li>Minimize rebuilds in forms with granular fields</li>
-</ul>
-<h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Secure storage for tokens</li>
-<li>Network timeouts and exponential backoff</li>
-<li>Validate and sanitize API inputs/outputs</li>
+<li>How do I switch environments?</li>
+<li>
+<p>Use <code>--dart-define-from-file</code> per flavor and keep separate Firebase configs.</p>
+</li>
+<li>
+<p>How do I add a new feature?</p>
+</li>
+<li>
+<p>Create a feature module and a Service Provider, register APIs/controllers, and add routes.</p>
+</li>
+<li>
+<p>How do I cache API results?</p>
+</li>
+<li>Use BondFire <code>cacheThenNetwork</code> or Cache <code>remember</code> helper.</li>
 </ul>
 
 

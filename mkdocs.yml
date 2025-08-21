@@ -87,13 +87,17 @@ nav:
   - Analytics:
       - Overview: analytics/index.md
   - Tooling:
+      - Bond CLI: tooling/bond-cli.md
       - Change App Name: tooling/change_app_name.md
   - Deployment:
       - Flavors: deployment/flavors.md
+      - CI/CD: deployment/ci-cd.md
   - Advanced Topics:
       - Index: advanced-topics/index.md
   - Cookbook:
       - Index: cookbook/index.md
   - Reference:
       - Index: reference/index.md
+  - FAQ: faq/index.md
+  - Glossary: glossary/index.md
 
