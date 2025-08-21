@@ -1,199 +1,183 @@
-# Themes
+# Theming
 
-##  Custom Font:
+## Introduction
 
-For example, if we want to use **Tajawal** font on our app, we have to follow these steps
+Theming in Bond provides a comprehensive system for creating consistent, beautiful, and maintainable user interfaces. Bond's theming approach goes beyond Flutter's basic ThemeData to provide design tokens, semantic color systems, typography scales, and component variants.
 
-1- download font family from [google fonts](https://fonts.google.com/specimen/Tajawal) 
+## Why Bond Theming
 
-2- copy  font family files to `assets/font` directory
+### Traditional Problems
 
-3- in `pubspec.yaml` file declare new font family below `font` key
-```yaml
-    fonts:  
-      - family: Tajawal-Bold  
-        fonts:  
-          - asset: assets/fonts/Tajawal-Bold.ttf  
-      - family: Tajawal-Medium  
-        fonts:  
-          - asset: assets/fonts/Tajawal-Medium.ttf  
-      - family: Tajawal  
-        fonts:  
-          - asset: assets/fonts/Tajawal-Regular.ttf
-```
+Flutter's default theming often leads to inconsistent designs with hardcoded values scattered throughout the codebase.
 
-you can detect the correct name of font `family` in mac os from font information  
+### Bond's Solution
 
-<img width="314" alt="full name font" src="https://user-images.githubusercontent.com/17902030/192465328-533eb775-ea8d-4e6b-9108-f464a3f61595.png">
+Bond provides semantic naming, design tokens, automatic dark mode support, and accessibility built-in through centralized theme definitions.
 
+## Design System Foundation
 
-4- create `TajawalFontsFamily` class to declare the font family in dart
-``` dart
-class TajawalFontsFamily {  
-  static const String bold = 'Tajawal-Bold';  
+### Color System
+
+```dart
+class AppColors {
+  static const Color primaryLight = Color(0xFF1976D2);
+  static const Color primaryDark = Color(0xFF90CAF9);
   
-  static const String medium = 'Tajawal-Medium';  
+  static ColorScheme get lightColorScheme => ColorScheme.light(
+    primary: primaryLight,
+    secondary: Color(0xFF388E3C),
+    surface: Color(0xFFFFFFFF),
+    background: Color(0xFFFAFAFA),
+    error: Color(0xFFD32F2F),
+  );
   
-  static const String regular = 'Tajawal';  
+  static ColorScheme get darkColorScheme => ColorScheme.dark(
+    primary: primaryDark,
+    secondary: Color(0xFF81C784),
+    surface: Color(0xFF121212),
+    background: Color(0xFF000000),
+    error: Color(0xFFEF5350),
+  );
 }
 ```
 
+### Typography System
 
-## Text Theme:
-
-We can extract the text themes with the help of a UI/UX designer and declare them in dart.
-
-for example, this code is the Rasel app text theme
-
-``` dart
-class RaselTextTheme extends TextTheme {  
-  @override  
-  TextStyle get displayLarge => const TextStyle(  
-        fontSize: 18,  
-        fontFamily: TajawalFontsFamily.bold,  
-      );  
+```dart
+class AppTextStyles {
+  static const String fontFamily = 'Inter';
   
-  @override  
-  TextStyle get headlineLarge => const TextStyle(  
-        fontSize: 16,  
-        fontFamily: TajawalFontsFamily.bold,  
-      );  
+  static const TextStyle headlineLarge = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 32,
+    fontWeight: FontWeight.w400,
+    height: 1.25,
+  );
   
-  @override  
-  TextStyle get headlineMedium => const TextStyle(  
-        fontSize: 16,  
-        fontFamily: TajawalFontsFamily.medium,  
-      );  
-  
-  @override  
-  TextStyle get headlineSmall => const TextStyle(  
-        fontSize: 16,  
-        fontFamily: TajawalFontsFamily.regular,  
-      );  
-  
-  @override  
-  TextStyle get bodyLarge => const TextStyle(  
-        fontSize: 14,  
-        fontFamily: TajawalFontsFamily.bold,  
-      );  
-  
-  @override  
-  TextStyle get bodyMedium => const TextStyle(  
-        fontSize: 14,  
-        fontFamily: TajawalFontsFamily.medium,  
-      );  
-  
-  @override  
-  TextStyle? get bodySmall => const TextStyle(  
-        fontSize: 14,  
-        fontFamily: TajawalFontsFamily.regular,  
-      );  
-  
-  @override  
-  TextStyle get titleLarge => const TextStyle(  
-        fontSize: 12,  
-        fontFamily: TajawalFontsFamily.bold,  
-      );  
-  
-  @override  
-  TextStyle get titleMedium => const TextStyle(  
-        fontSize: 12,  
-        fontFamily: TajawalFontsFamily.medium,  
-      );  
-  
-  @override  
-  TextStyle get titleSmall => const TextStyle(  
-        fontSize: 12,  
-        fontFamily: TajawalFontsFamily.regular,  
-      );  
-  
-  @override  
-  TextStyle get labelLarge => const TextStyle(  
-        fontSize: 10,  
-        fontFamily: TajawalFontsFamily.bold,  
-      );  
+  static const TextStyle bodyLarge = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    height: 1.50,
+    letterSpacing: 0.15,
+  );
 }
 ```
-just replace the content of `core/resources/bond_text_theme.dart` file with the code above
-and it's recommended to rename the file to `rasel_text_theme.dart` or wherever your app name is.
 
+### Spacing System
 
-### Usage:
+```dart
+class AppSpacing {
+  static const double xs = 8;
+  static const double sm = 12;
+  static const double md = 16;
+  static const double lg = 24;
+  static const double xl = 32;
+  
+  static const EdgeInsets pageInsets = EdgeInsets.all(lg);
+  static const EdgeInsets cardInsets = EdgeInsets.all(md);
+}
+```
 
-without a text theme, we need to declare your text style in a boring way like this
+## Theme Implementation
 
+```dart
+class AppTheme {
+  static ThemeData lightTheme = ThemeData(
+    useMaterial3: true,
+    colorScheme: AppColors.lightColorScheme,
+    textTheme: _buildTextTheme(AppColors.lightColorScheme),
+    appBarTheme: _buildAppBarTheme(AppColors.lightColorScheme),
+    elevatedButtonTheme: _buildElevatedButtonTheme(AppColors.lightColorScheme),
+  );
 
-``` dart
- Text(
-      widget.mainPrice,
-      textAlign: TextAlign.left,
-      overflow: TextOverflow.ellipsis,
-      maxLines: 1,
-      style: TextStyle(
-        fontSize: 16,
-        fontFamily: TajawalFontsFamily.bold,
+  static ThemeData darkTheme = ThemeData(
+    useMaterial3: true,
+    colorScheme: AppColors.darkColorScheme,
+    textTheme: _buildTextTheme(AppColors.darkColorScheme),
+    appBarTheme: _buildAppBarTheme(AppColors.darkColorScheme),
+    elevatedButtonTheme: _buildElevatedButtonTheme(AppColors.darkColorScheme),
+  );
+}
+```
+
+## Context Extensions
+
+```dart
+extension ThemeContextExtension on BuildContext {
+  ThemeData get theme => Theme.of(this);
+  ColorScheme get colors => theme.colorScheme;
+  TextTheme get textStyles => theme.textTheme;
+  
+  EdgeInsets get pageInsets => AppSpacing.pageInsets;
+  EdgeInsets get cardInsets => AppSpacing.cardInsets;
+}
+```
+
+## Dark Mode Support
+
+```dart
+class ThemeService extends ChangeNotifier {
+  ThemeMode _themeMode = ThemeMode.system;
+  
+  ThemeMode get themeMode => _themeMode;
+  
+  Future<void> setThemeMode(ThemeMode mode) async {
+    _themeMode = mode;
+    notifyListeners();
+    await Cache.put('theme_mode', mode.name);
+  }
+
+  Future<void> toggleTheme() async {
+    final newMode = _themeMode == ThemeMode.light 
+        ? ThemeMode.dark 
+        : ThemeMode.light;
+    await setThemeMode(newMode);
+  }
+}
+```
+
+## Usage Examples
+
+```dart
+class WelcomeCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: context.cardInsets,
+      child: Padding(
+        padding: context.cardInsets,
+        child: Column(
+          children: [
+            Text(
+              'Welcome',
+              style: context.textStyles.headlineMedium,
+            ),
+            SizedBox(height: AppSpacing.sm),
+            Text(
+              'Get started with Bond',
+              style: context.textStyles.bodyMedium?.copyWith(
+                color: context.colors.onSurfaceVariant,
+              ),
+            ),
+          ],
+        ),
       ),
     );
-```
-this code is hard to write, read, or to refactoring
-
-With text theme ✌️:
-
-``` dart
-Text(
-      widget.strokedPrice,
-      textAlign: TextAlign.left,
-      overflow: TextOverflow.ellipsis,
-      maxLines: 1,
-      style: context.textTheme.headlineLarge,
-    );
-```
-
-
-### Text Style Color & Other properties
-
-We still missing the text color and other text style properties 👎
-
-We can simply create  `ColoredTextStyle` extension inside the `core/resources/bond_text_theme.dart` file
-
-``` dart
-extension ColoredTextStyle on TextStyle {
-  TextStyle get accentColor => copyWith(color: MyTheme.accentColor);
+  }
 }
 ```
 
-How to use:
- 
-``` dart
-Text(
-      widget.mainPrice,
-      textAlign: TextAlign.left,
-      overflow: TextOverflow.ellipsis,
-      maxLines: 1,
-      style: context.textTheme.headlineLarge?.accentColor,
-    );
-```
+## Best Practices
 
+- ✅ Use semantic color names instead of literal colors
+- ✅ Implement both light and dark themes from the start
+- ✅ Create design tokens for consistent spacing and sizing
+- ✅ Test themes with different screen sizes
+- ✅ Consider accessibility and contrast ratios
 
-We can also add any other text style property to `TextStyle` extension  like decoration or letter Spacing .. etc
+## Next Steps
 
-``` dart
-extension DecorationTextStyle on TextStyle {
-   TextStyle get lineThrough => copyWith(decoration: TextDecoration.lineThrough);
-   TextStyle get overline => copyWith(color: TextDecoration overline);
-}
-```
-
-and use it with color extension or any other text style extension: 
-
-``` dart
-Text(
-      widget.strokedPrice,
-      textAlign: TextAlign.left,
-      overflow: TextOverflow.ellipsis,
-      maxLines: 1,
-      style: context.textTheme.headlineLarge?.accentColor
-                                             .lineThrough
-                                             .overline,
-    );
-```
+- [Learn about Navigation](/docs/ui/navigation)
+- [Explore Localization](/docs/ui/localization)
+- [Build Reusable Widgets](/docs/ui/reusable-widgets)
