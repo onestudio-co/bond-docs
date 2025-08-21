@@ -37,6 +37,12 @@ theme:
 
 plugins:
   - search
+extra:
+  search:
+    provider: algolia
+    algolia_app_id: YOUR_APP_ID
+    algolia_api_key: YOUR_SEARCH_API_KEY
+    algolia_index_name: YOUR_INDEX_NAME
 
 markdown_extensions:
   - admonition
@@ -55,21 +61,39 @@ markdown_extensions:
       linenums: false
 
 nav:
+  - Home: index.md
   - Prologue:
-      - prologue/index.md
+      - Overview: prologue/index.md
   - Getting Started:
-      - getting_started.md
-      - environment.md
-      - firebase.md
-      - flavors.md
+      - Introduction: getting-started/index.md
+      - Environment: getting-started/environment.md
+      - Firebase: getting-started/firebase.md
   - Architecture Concepts:
-      - service_provider.md
-  - Data & Networking: networking.md
-  - Caching: caching.md
-  - Forms: forms.md
-  - Notifications: notifications.md
-  - User Interface:
-      - themes.md
-      - bond_extentions.md
-      - launcher.md
+      - Service Providers: architecture-concepts/service-providers.md
+  - The Basics:
+      - Routing & Navigation: user-interface/navigation.md
+      - Localization: user-interface/localization.md
+      - Theming: user-interface/themes.md
+      - Extensions: user-interface/extensions.md
+      - Launcher & Splash: user-interface/launcher.md
+  - Data & Networking:
+      - Overview: data-networking/index.md
+  - Forms:
+      - Overview: forms/index.md
+  - Caching:
+      - Overview: caching/index.md
+  - Notifications:
+      - Overview: notifications/index.md
+  - Analytics:
+      - Overview: analytics/index.md
+  - Tooling:
+      - Change App Name: tooling/change_app_name.md
+  - Deployment:
+      - Flavors: deployment/flavors.md
+  - Advanced Topics:
+      - Index: advanced-topics/index.md
+  - Cookbook:
+      - Index: cookbook/index.md
+  - Reference:
+      - Index: reference/index.md
 

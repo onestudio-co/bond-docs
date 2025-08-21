@@ -1,23 +1,22 @@
-## Flavors
-  This template support two flavors (production & staging)
+# Flavors
 
-- you can run the app directly from terminal using this command line:
+Production and staging flavors are configured with separate entry points and Firebase configs.
 
-  ```  flutter run --flavor production -t lib/main_production.dart ```
-  
-  or for staging
+## Run
 
-  ```  flutter run --flavor staging -t lib/main_staging.dart ```
+```bash
+flutter run --flavor production -t lib/main_production.dart
+flutter run --flavor staging -t lib/main_staging.dart
+```
 
-     
- - or you need to add new flutter configration for each flavor  (staging and production)
-  
-**Production**
+## IDE configs
 
-<img width="722" alt="image" src="https://user-images.githubusercontent.com/17902030/189459865-61fa7694-c412-4a76-bdce-2024ecce07c8.png">
+- Add two run configurations pointing to the respective entry files
+- Ensure `--dart-define-from-file` points to the correct env file per flavor
 
-**Staging**
+## CI/CD
 
-<img width="717" alt="image" src="https://user-images.githubusercontent.com/17902030/189459844-94a9bcfe-61dd-4df7-81b2-8915ee09c72f.png">
+- Build matrices per flavor
+- Upload symbols and mapping files separately per environment
 
 
