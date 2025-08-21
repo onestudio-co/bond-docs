@@ -1,12 +1,22 @@
 # Prologue
 
-Welcome to Flutter Bond.
+Flutter Bond is a cohesive toolkit for building scalable Flutter apps. It pairs a production‑ready starter app with core packages for networking, caching, forms, notifications, and analytics.
 
-- What is Bond: A modular Flutter app platform with core packages (networking, cache, forms, notifications, analytics) and a starter template.
-- Philosophy: Developer experience, modularity via Service Providers, shared decoding, production-ready defaults.
-- Packages: See `bond-core/` (monorepo), `flutter-bond/` (starter app), `bond-cli/` (scaffolding), and this docs site.
+## Philosophy
 
-Next steps:
-- Start with Getting Started to create a project and run flavors.
-- Dive into Architecture Concepts to learn Service Providers and DI.
-- Explore packages in Data & Networking, Forms, Caching, Notifications, and Analytics.
+- Clear conventions over ad‑hoc structure
+- Explicit dependencies using Service Providers and GetIt
+- Shared decoding pipeline for consistent model handling
+- First‑class developer experience: CLI scaffolding, flavors, Firebase wiring
+
+## What’s in the box
+
+- Starter app: `flutter-bond`
+- Core packages: `bond-core` monorepo
+- Scaffolding: `bond-cli`
+
+## Where to start
+
+- Getting Started → Introduction
+- Architecture Concepts → Service Providers
+- Data & Networking → Overview
