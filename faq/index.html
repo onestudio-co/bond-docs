@@ -1,0 +1,3554 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for Flutter Bond and Bond Core">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/docs/faq/">
+      
+      
+        <link rel="prev" href="../reference/">
+      
+      
+        <link rel="next" href="../glossary/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>FAQ - Flutter Bond</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#frequently-asked-questions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Flutter Bond" class="md-header__button md-logo" aria-label="Flutter Bond" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flutter Bond
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/onestudio-co/flutter-bond" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Flutter Bond" class="md-nav__button md-logo" aria-label="Flutter Bond" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg>
+
+    </a>
+    Flutter Bond
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/onestudio-co/flutter-bond" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What Is Bond
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Philosophy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/upgrades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Upgrades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Install and Create
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/firebase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firebase
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/flavors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flavors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concepts/service-providers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Providers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concepts/modules-and-boundaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modules and Boundaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concepts/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concepts/error-handling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data and Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Caching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analytics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui/themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui/navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Navigation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui/localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Localization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui/reusable-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reusable Widgets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui/extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui/launcher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Launcher
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tooling
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tooling/bond-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bond CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tooling/monorepo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monorepo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tooling/debugging-logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Debugging and Logging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tooling/change_app_name/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Change App Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-topics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Recipes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Recipes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/ci-cd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CI/CD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-bond-and-how-is-it-different-from-other-flutter-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Bond and how is it different from other Flutter frameworks?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-use-all-bond-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to use all Bond packages?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-bond-compare-to-other-state-management-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does Bond compare to other state management solutions?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-service-providers-instead-of-just-using-getit-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Service Providers instead of just using GetIt directly?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-organize-features-in-larger-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I organize features in larger applications?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-bond-with-existing-flutter-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use Bond with existing Flutter projects?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-bondfire-compare-to-using-dio-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does BondFire compare to using Dio directly?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-handle-authentication-with-bondfire" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I handle authentication with BondFire?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-best-caching-strategy-for-my-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the best caching strategy for my app?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-create-complex-forms-with-conditional-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I create complex forms with conditional fields?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-validate-fields-against-server-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I validate fields against server data?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-test-service-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I test Service Providers?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-test-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I test forms?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-app-is-slow-to-start-how-can-i-optimize-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      My app is slow to start. How can I optimize it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-optimize-network-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I optimize network performance?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-set-up-different-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I set up different environments?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-set-up-cicd-for-bond-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I set up CI/CD for Bond projects?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#im-getting-provider-not-found-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      I'm getting "Provider not found" errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-json-deserialization-is-failing" class="md-nav__link">
+    <span class="md-ellipsis">
+      My JSON deserialization is failing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-forms-arent-validating-correctly" class="md-nav__link">
+    <span class="md-ellipsis">
+      My forms aren't validating correctly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-cache-isnt-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      My cache isn't working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-migrate-from-other-packages-to-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I migrate from other packages to Bond?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How do I migrate from other packages to Bond?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-dio-to-bondfire" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Dio to BondFire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-sharedpreferences-to-bond-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      From SharedPreferences to Bond Cache
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-migrate-existing-forms-to-bond-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I migrate existing forms to Bond Forms?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-most-important-bond-conventions-to-follow" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the most important Bond conventions to follow?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-structure-my-bond-project-for-a-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I structure my Bond project for a team?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-testing-strategy-should-i-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      What testing strategy should I use?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-implement-real-time-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I implement real-time features?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-implement-offline-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I implement offline support?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Help
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-can-i-get-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where can I get support?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-contribute-to-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I contribute to Bond?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-roadmap-for-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the roadmap for Bond?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enterprise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-bond-suitable-for-enterprise-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Bond suitable for enterprise applications?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-you-offer-enterprise-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do you offer enterprise support?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-bond-in-regulated-industries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use Bond in regulated industries?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-and-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version and Compatibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version and Compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-flutter-versions-does-bond-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Flutter versions does Bond support?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-often-does-bond-release-new-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      How often does Bond release new versions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-upgrade-path-for-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the upgrade path for breaking changes?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-app-wont-build-after-updating-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      My app won't build after updating Bond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-is-worse-after-updating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance is worse after updating
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-bond-and-how-is-it-different-from-other-flutter-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Bond and how is it different from other Flutter frameworks?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-use-all-bond-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to use all Bond packages?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-bond-compare-to-other-state-management-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does Bond compare to other state management solutions?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-service-providers-instead-of-just-using-getit-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Service Providers instead of just using GetIt directly?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-organize-features-in-larger-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I organize features in larger applications?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-bond-with-existing-flutter-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use Bond with existing Flutter projects?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-bondfire-compare-to-using-dio-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does BondFire compare to using Dio directly?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-handle-authentication-with-bondfire" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I handle authentication with BondFire?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-best-caching-strategy-for-my-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the best caching strategy for my app?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-create-complex-forms-with-conditional-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I create complex forms with conditional fields?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-validate-fields-against-server-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I validate fields against server data?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-test-service-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I test Service Providers?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-test-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I test forms?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-app-is-slow-to-start-how-can-i-optimize-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      My app is slow to start. How can I optimize it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-optimize-network-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I optimize network performance?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-set-up-different-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I set up different environments?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-set-up-cicd-for-bond-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I set up CI/CD for Bond projects?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#im-getting-provider-not-found-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      I'm getting "Provider not found" errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-json-deserialization-is-failing" class="md-nav__link">
+    <span class="md-ellipsis">
+      My JSON deserialization is failing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-forms-arent-validating-correctly" class="md-nav__link">
+    <span class="md-ellipsis">
+      My forms aren't validating correctly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-cache-isnt-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      My cache isn't working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-migrate-from-other-packages-to-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I migrate from other packages to Bond?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How do I migrate from other packages to Bond?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-dio-to-bondfire" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Dio to BondFire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-sharedpreferences-to-bond-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      From SharedPreferences to Bond Cache
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-migrate-existing-forms-to-bond-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I migrate existing forms to Bond Forms?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-most-important-bond-conventions-to-follow" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the most important Bond conventions to follow?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-structure-my-bond-project-for-a-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I structure my Bond project for a team?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-testing-strategy-should-i-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      What testing strategy should I use?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-implement-real-time-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I implement real-time features?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-implement-offline-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I implement offline support?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Help
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-can-i-get-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where can I get support?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-contribute-to-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I contribute to Bond?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-roadmap-for-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the roadmap for Bond?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enterprise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-bond-suitable-for-enterprise-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Bond suitable for enterprise applications?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-you-offer-enterprise-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do you offer enterprise support?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-bond-in-regulated-industries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use Bond in regulated industries?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-and-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version and Compatibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version and Compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-flutter-versions-does-bond-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Flutter versions does Bond support?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-often-does-bond-release-new-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      How often does Bond release new versions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-upgrade-path-for-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the upgrade path for breaking changes?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-app-wont-build-after-updating-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      My app won't build after updating Bond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-is-worse-after-updating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance is worse after updating
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h1>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-bond-and-how-is-it-different-from-other-flutter-frameworks">What is Bond and how is it different from other Flutter frameworks?<a class="headerlink" href="#what-is-bond-and-how-is-it-different-from-other-flutter-frameworks" title="Permanent link">&para;</a></h3>
+<p>Bond is a comprehensive Flutter toolkit that provides a complete development ecosystem rather than just individual packages. Unlike other solutions that focus on single concerns, Bond offers:</p>
+<ul>
+<li><strong>Unified Architecture</strong>: All packages work together seamlessly using Service Providers</li>
+<li><strong>Production Ready</strong>: Includes everything needed for real apps (analytics, push notifications, caching, etc.)</li>
+<li><strong>Developer Experience</strong>: CLI tools, comprehensive docs, and clear conventions</li>
+<li><strong>Type Safety</strong>: Everything is typed, from API responses to form validation</li>
+</ul>
+<h3 id="do-i-need-to-use-all-bond-packages">Do I need to use all Bond packages?<a class="headerlink" href="#do-i-need-to-use-all-bond-packages" title="Permanent link">&para;</a></h3>
+<p>No! Bond is designed for gradual adoption. You can:
+- Start with just BondFire for networking
+- Add Bond Forms when you need robust form handling
+- Use the full starter template for new projects
+- Mix Bond packages with your existing Flutter packages</p>
+<h3 id="how-does-bond-compare-to-other-state-management-solutions">How does Bond compare to other state management solutions?<a class="headerlink" href="#how-does-bond-compare-to-other-state-management-solutions" title="Permanent link">&para;</a></h3>
+<p>Bond doesn't replace state management solutions like Riverpod, BLoC, or GetX. Instead, it provides:
+- <strong>Service Providers</strong> for dependency injection and feature organization
+- <strong>Form Controllers</strong> that integrate with your chosen state management
+- <strong>Typed networking</strong> that works with any state solution
+- <strong>Adapters</strong> for popular state management libraries</p>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<h3 id="why-service-providers-instead-of-just-using-getit-directly">Why Service Providers instead of just using GetIt directly?<a class="headerlink" href="#why-service-providers-instead-of-just-using-getit-directly" title="Permanent link">&para;</a></h3>
+<p>Service Providers provide several benefits over direct GetIt usage:</p>
+<ol>
+<li><strong>Organization</strong>: Each feature has its own provider with clear boundaries</li>
+<li><strong>Response Decoding</strong>: Shared JSON factories across networking and caching</li>
+<li><strong>Conventions</strong>: Consistent patterns across all features</li>
+<li><strong>Testing</strong>: Easy to swap implementations for testing</li>
+<li><strong>Lifecycle Management</strong>: Proper initialization and cleanup</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Direct GetIt - scattered and hard to maintain</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">GetIt</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">registerLazySingleton</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AuthApi</span><span class="p">());</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">GetIt</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">registerFactory</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">LoginController</span><span class="p">());</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// ... scattered across multiple files</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// Bond Service Provider - organized and clear</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kd">class</span><span class="w"> </span><span class="nc">AuthServiceProvider</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ServiceProvider</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="n">ResponseDecoding</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nd">@override</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">register</span><span class="p">(</span><span class="n">GetIt</span><span class="w"> </span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">it</span><span class="p">.</span><span class="n">registerLazySingleton</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AuthApi</span><span class="p">(</span><span class="n">it</span><span class="p">()));</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">it</span><span class="p">.</span><span class="n">registerFactory</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">LoginController</span><span class="p">(</span><span class="n">it</span><span class="p">()));</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nd">@override</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span><span class="w"> </span><span class="n">JsonFactory</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">get</span><span class="w"> </span><span class="n">factories</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="nl">User:</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">};</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="how-do-i-organize-features-in-larger-applications">How do I organize features in larger applications?<a class="headerlink" href="#how-do-i-organize-features-in-larger-applications" title="Permanent link">&para;</a></h3>
+<p>Bond follows a feature-based architecture:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>lib/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── features/
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── auth/           # Authentication feature
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   ├── posts/          # Posts feature  
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   ├── messaging/      # Messaging feature
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│   └── profile/        # Profile feature
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>├── core/               # Shared utilities
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>└── providers/          # App-level providers
+</code></pre></div>
+<p>Each feature should:
+- Have its own Service Provider
+- Be self-contained with minimal dependencies
+- Communicate through interfaces or events
+- Include its own models, APIs, and UI components</p>
+<h3 id="can-i-use-bond-with-existing-flutter-projects">Can I use Bond with existing Flutter projects?<a class="headerlink" href="#can-i-use-bond-with-existing-flutter-projects" title="Permanent link">&para;</a></h3>
+<p>Yes! Bond supports incremental adoption:</p>
+<ol>
+<li><strong>Start with one package</strong>: Add BondFire to replace your existing HTTP client</li>
+<li><strong>Add Service Providers</strong>: Gradually organize your dependencies</li>
+<li><strong>Migrate features</strong>: Move existing features to Bond's structure</li>
+<li><strong>Use the CLI</strong>: Generate new features with Bond conventions</li>
+</ol>
+<h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">&para;</a></h2>
+<h3 id="how-does-bondfire-compare-to-using-dio-directly">How does BondFire compare to using Dio directly?<a class="headerlink" href="#how-does-bondfire-compare-to-using-dio-directly" title="Permanent link">&para;</a></h3>
+<p>BondFire is built on Dio but adds:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Direct Dio - lots of boilerplate</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">final</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">dio</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">);</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">final</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">List</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">.</span><span class="n">map</span><span class="p">((</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">))</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">.</span><span class="n">toList</span><span class="p">();</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">// BondFire - clean and type-safe</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kd">final</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">bondFire</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="n">ListResponse</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">.</span><span class="kd">factory</span><span class="p">(</span><span class="n">ListResponse</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="p">.</span><span class="n">fromJson</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">.</span><span class="n">execute</span><span class="p">();</span>
+</code></pre></div>
+<p>Benefits:
+- <strong>Type safety</strong> with compile-time checking
+- <strong>Automatic caching</strong> with configurable policies
+- <strong>Consistent error handling</strong> across all endpoints
+- <strong>Shared JSON factories</strong> eliminate duplication</p>
+<h3 id="how-do-i-handle-authentication-with-bondfire">How do I handle authentication with BondFire?<a class="headerlink" href="#how-do-i-handle-authentication-with-bondfire" title="Permanent link">&para;</a></h3>
+<p>Use interceptors for automatic token handling:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">AuthInterceptor</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Interceptor</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">TokenStorage</span><span class="w"> </span><span class="n">_tokenStorage</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nd">@override</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">onRequest</span><span class="p">(</span><span class="n">RequestOptions</span><span class="w"> </span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">RequestInterceptorHandler</span><span class="w"> </span><span class="n">handler</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_tokenStorage</span><span class="p">.</span><span class="n">getAccessToken</span><span class="p">();</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">token</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="n">options</span><span class="p">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Authorization&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Bearer </span><span class="si">$</span><span class="n">token</span><span class="s1">&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">handler</span><span class="p">.</span><span class="n">next</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="nd">@override</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">onError</span><span class="p">(</span><span class="n">DioException</span><span class="w"> </span><span class="n">err</span><span class="p">,</span><span class="w"> </span><span class="n">ErrorInterceptorHandler</span><span class="w"> </span><span class="n">handler</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="p">.</span><span class="n">response</span><span class="o">?</span><span class="p">.</span><span class="n">statusCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">401</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">      </span><span class="c1">// Token expired, try to refresh</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">refreshed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_refreshToken</span><span class="p">();</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">refreshed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="c1">// Retry original request</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_retry</span><span class="p">(</span><span class="n">err</span><span class="p">.</span><span class="n">requestOptions</span><span class="p">);</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="n">handler</span><span class="p">.</span><span class="n">resolve</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="n">handler</span><span class="p">.</span><span class="n">next</span><span class="p">(</span><span class="n">err</span><span class="p">);</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="whats-the-best-caching-strategy-for-my-app">What's the best caching strategy for my app?<a class="headerlink" href="#whats-the-best-caching-strategy-for-my-app" title="Permanent link">&para;</a></h3>
+<p>Choose based on your data characteristics:</p>
+<ul>
+<li><strong>Cache-else-network</strong>: For data that doesn't change often (user profiles)</li>
+<li><strong>Cache-then-network</strong>: For feeds where you want instant loading + fresh data</li>
+<li><strong>Network-else-cache</strong>: For critical data where freshness is important</li>
+<li><strong>Network-only</strong>: For data that should never be cached (payments, sensitive info)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// User profile - rarely changes</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">bondFire</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;/me&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="p">.</span><span class="n">cache</span><span class="p">(</span><span class="nl">cachePolicy:</span><span class="w"> </span><span class="n">CachePolicy</span><span class="p">.</span><span class="n">cacheElseNetwork</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="p">.</span><span class="n">execute</span><span class="p">();</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">// News feed - want instant loading + fresh content</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">bondFire</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="n">ListResponse</span><span class="o">&lt;</span><span class="n">Post</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s1">&#39;/posts&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">.</span><span class="n">cache</span><span class="p">(</span><span class="nl">cachePolicy:</span><span class="w"> </span><span class="n">CachePolicy</span><span class="p">.</span><span class="n">cacheThenNetwork</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="p">.</span><span class="n">streamExecute</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="forms">Forms<a class="headerlink" href="#forms" title="Permanent link">&para;</a></h2>
+<h3 id="how-do-i-create-complex-forms-with-conditional-fields">How do I create complex forms with conditional fields?<a class="headerlink" href="#how-do-i-create-complex-forms-with-conditional-fields" title="Permanent link">&para;</a></h3>
+<p>Use dynamic form state updates:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">DynamicFormController</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">FormStateNotifier</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">onAccountTypeChanged</span><span class="p">(</span><span class="n">AccountType</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">FormFieldState</span><span class="o">&gt;</span><span class="p">.</span><span class="n">from</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">fields</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="c1">// Remove type-specific fields</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">fields</span><span class="p">.</span><span class="n">removeWhere</span><span class="p">((</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="s1">&#39;business_&#39;</span><span class="p">));</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">fields</span><span class="p">.</span><span class="n">removeWhere</span><span class="p">((</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="s1">&#39;personal_&#39;</span><span class="p">));</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="c1">// Add new type-specific fields</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="n">AccountType</span><span class="p">.</span><span class="nl">business:</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="n">fields</span><span class="p">.</span><span class="n">addAll</span><span class="p">({</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">          </span><span class="s1">&#39;business_name&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">TextFieldState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="nl">rules:</span><span class="w"> </span><span class="p">[</span><span class="n">Rules</span><span class="p">.</span><span class="kd">required</span><span class="p">()]),</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">          </span><span class="s1">&#39;tax_id&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">TextFieldState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="nl">rules:</span><span class="w"> </span><span class="p">[</span><span class="n">Rules</span><span class="p">.</span><span class="kd">required</span><span class="p">()]),</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="p">});</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="n">AccountType</span><span class="p">.</span><span class="nl">personal:</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">        </span><span class="n">fields</span><span class="p">.</span><span class="n">addAll</span><span class="p">({</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">          </span><span class="s1">&#39;personal_id&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">TextFieldState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="nl">rules:</span><span class="w"> </span><span class="p">[</span><span class="n">Rules</span><span class="p">.</span><span class="kd">required</span><span class="p">()]),</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">        </span><span class="p">});</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">    </span><span class="n">updateFormState</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">copyWith</span><span class="p">(</span><span class="nl">fields:</span><span class="w"> </span><span class="n">fields</span><span class="p">));</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="how-do-i-validate-fields-against-server-data">How do I validate fields against server data?<a class="headerlink" href="#how-do-i-validate-fields-against-server-data" title="Permanent link">&para;</a></h3>
+<p>Create async validation rules:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">UniqueEmailRule</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ValidationRule</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">AuthRepository</span><span class="w"> </span><span class="n">_authRepository</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nd">@override</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">validateAsync</span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">FormFieldState</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fields</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// Let required rule handle this</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_authRepository</span><span class="p">.</span><span class="n">isEmailAvailable</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// Fail gracefully if server is unreachable</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
+<h3 id="how-do-i-test-service-providers">How do I test Service Providers?<a class="headerlink" href="#how-do-i-test-service-providers" title="Permanent link">&para;</a></h3>
+<p>Use dependency injection to swap implementations:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="n">group</span><span class="p">(</span><span class="s1">&#39;AuthServiceProvider&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="kd">late</span><span class="w"> </span><span class="n">GetIt</span><span class="w"> </span><span class="n">testContainer</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">setUp</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">      </span><span class="n">testContainer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetIt</span><span class="p">.</span><span class="n">instance</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">      </span><span class="c1">// Register test implementations</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">      </span><span class="n">testContainer</span><span class="p">.</span><span class="n">registerLazySingleton</span><span class="o">&lt;</span><span class="n">AuthApi</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">MockAuthApi</span><span class="p">());</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">      </span><span class="c1">// Register the provider</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">provider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AuthServiceProvider</span><span class="p">();</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">      </span><span class="n">provider</span><span class="p">.</span><span class="n">register</span><span class="p">(</span><span class="n">testContainer</span><span class="p">);</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="n">tearDown</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">      </span><span class="n">testContainer</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="n">test</span><span class="p">(</span><span class="s1">&#39;should register all dependencies&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">      </span><span class="n">expect</span><span class="p">(</span><span class="n">testContainer</span><span class="p">.</span><span class="n">isRegistered</span><span class="o">&lt;</span><span class="n">AuthRepository</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">      </span><span class="n">expect</span><span class="p">(</span><span class="n">testContainer</span><span class="p">.</span><span class="n">isRegistered</span><span class="o">&lt;</span><span class="n">LoginFormController</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="how-do-i-test-forms">How do I test forms?<a class="headerlink" href="#how-do-i-test-forms" title="Permanent link">&para;</a></h3>
+<p>Test controllers independently of widgets:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="n">group</span><span class="p">(</span><span class="s1">&#39;LoginFormController&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="kd">late</span><span class="w"> </span><span class="n">LoginFormController</span><span class="w"> </span><span class="n">controller</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="kd">late</span><span class="w"> </span><span class="n">MockAuthRepository</span><span class="w"> </span><span class="n">mockAuthRepo</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="n">setUp</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">      </span><span class="n">mockAuthRepo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MockAuthRepository</span><span class="p">();</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">      </span><span class="n">controller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoginFormController</span><span class="p">(</span><span class="n">mockAuthRepo</span><span class="p">);</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="n">test</span><span class="p">(</span><span class="s1">&#39;should validate email correctly&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">      </span><span class="n">controller</span><span class="p">.</span><span class="n">updateText</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;invalid-email&#39;</span><span class="p">);</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">      </span><span class="n">expect</span><span class="p">(</span><span class="n">controller</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">textField</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">).</span><span class="n">isValid</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">      </span><span class="n">controller</span><span class="p">.</span><span class="n">updateText</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;test@example.com&#39;</span><span class="p">);</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">      </span><span class="n">expect</span><span class="p">(</span><span class="n">controller</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">textField</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">).</span><span class="n">isValid</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
+<h3 id="my-app-is-slow-to-start-how-can-i-optimize-it">My app is slow to start. How can I optimize it?<a class="headerlink" href="#my-app-is-slow-to-start-how-can-i-optimize-it" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Use lazy registration</strong> in Service Providers:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">it</span><span class="p">.</span><span class="n">registerLazySingleton</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ExpensiveService</span><span class="p">());</span><span class="w"> </span><span class="c1">// Created only when needed</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Defer heavy initialization</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">AppServiceProvider</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ServiceProvider</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nd">@override</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">register</span><span class="p">(</span><span class="n">GetIt</span><span class="w"> </span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="c1">// Don&#39;t do heavy work here</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">it</span><span class="p">.</span><span class="n">registerLazySingleton</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DatabaseService</span><span class="p">());</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="c1">// Schedule heavy work for later</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="n">WidgetsBinding</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">addPostFrameCallback</span><span class="p">((</span><span class="n">_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">      </span><span class="n">_initializeHeavyServices</span><span class="p">();</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Use async singletons</strong> for services requiring async setup:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">it</span><span class="p">.</span><span class="n">registerSingletonAsync</span><span class="o">&lt;</span><span class="n">DatabaseService</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DatabaseService</span><span class="p">();</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="kd">await</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">db</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">});</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="how-do-i-optimize-network-performance">How do I optimize network performance?<a class="headerlink" href="#how-do-i-optimize-network-performance" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Use appropriate cache policies</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// For feeds - cache then network</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">bondFire</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="n">ListResponse</span><span class="o">&lt;</span><span class="n">Post</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s1">&#39;/posts&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="p">.</span><span class="n">cache</span><span class="p">(</span><span class="nl">cachePolicy:</span><span class="w"> </span><span class="n">CachePolicy</span><span class="p">.</span><span class="n">cacheThenNetwork</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="p">.</span><span class="n">streamExecute</span><span class="p">();</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Implement request batching</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">Future</span><span class="o">&lt;</span><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">User</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">batchGetUsers</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">userIds</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">futures</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userIds</span><span class="p">.</span><span class="n">map</span><span class="p">((</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">bondFire</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;/users/</span><span class="si">$</span><span class="n">id</span><span class="s1">&#39;</span><span class="p">).</span><span class="kd">factory</span><span class="p">(</span><span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">).</span><span class="n">execute</span><span class="p">()</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="p">);</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Future</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="n">futures</span><span class="p">);</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="n">fromIterables</span><span class="p">(</span><span class="n">userIds</span><span class="p">,</span><span class="w"> </span><span class="n">users</span><span class="p">);</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Use connection pooling and HTTP/2</strong>.</p>
+</li>
+</ol>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<h3 id="how-do-i-set-up-different-environments">How do I set up different environments?<a class="headerlink" href="#how-do-i-set-up-different-environments" title="Permanent link">&para;</a></h3>
+<p>Bond uses environment files with flavors:</p>
+<ol>
+<li>
+<p><strong>Create environment files</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>cp<span class="w"> </span>env.example.json<span class="w"> </span>env.staging.json
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>cp<span class="w"> </span>env.example.json<span class="w"> </span>env.production.json
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Configure each environment</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">// env.staging.json</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nt">&quot;API_BASE_URL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.staging.myapp.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="nt">&quot;FIREBASE_PROJECT_ID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myapp-staging&quot;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">}</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1">// env.production.json  </span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="p">{</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span><span class="nt">&quot;API_BASE_URL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.myapp.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">  </span><span class="nt">&quot;FIREBASE_PROJECT_ID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myapp-production&quot;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Run with specific environment</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>flutter<span class="w"> </span>run<span class="w"> </span>--flavor<span class="w"> </span>staging<span class="w"> </span>-t<span class="w"> </span>lib/main_staging.dart<span class="w"> </span>--dart-define-from-file<span class="o">=</span>env.staging.json
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="how-do-i-set-up-cicd-for-bond-projects">How do I set up CI/CD for Bond projects?<a class="headerlink" href="#how-do-i-set-up-cicd-for-bond-projects" title="Permanent link">&para;</a></h3>
+<p>Use the provided GitHub Actions templates:</p>
+<ol>
+<li><strong>Copy CI workflow</strong> from the CI/CD guide</li>
+<li><strong>Set up secrets</strong> for environment files and signing keys</li>
+<li><strong>Configure deployment</strong> targets (Firebase App Distribution, App Store, Play Store)</li>
+<li><strong>Add quality gates</strong> for testing and analysis</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="im-getting-provider-not-found-errors">I'm getting "Provider not found" errors<a class="headerlink" href="#im-getting-provider-not-found-errors" title="Permanent link">&para;</a></h3>
+<p>This usually means a Service Provider isn't registered:</p>
+<ol>
+<li>
+<p><strong>Check provider registration</strong> in <code>lib/app/app.dart</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">ServiceProvider</span><span class="o">&gt;</span><span class="w"> </span><span class="n">providers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="c1">// Make sure your provider is listed here</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="n">AuthServiceProvider</span><span class="p">(),</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">];</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Verify provider implementation</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">AuthServiceProvider</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ServiceProvider</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="nd">@override</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">register</span><span class="p">(</span><span class="n">GetIt</span><span class="w"> </span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="c1">// Make sure you&#39;re registering the service</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="n">it</span><span class="p">.</span><span class="n">registerLazySingleton</span><span class="o">&lt;</span><span class="n">AuthRepository</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AuthRepository</span><span class="p">());</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="my-json-deserialization-is-failing">My JSON deserialization is failing<a class="headerlink" href="#my-json-deserialization-is-failing" title="Permanent link">&para;</a></h3>
+<p>Check your ResponseDecoding setup:</p>
+<ol>
+<li>
+<p><strong>Ensure factories are registered</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MyServiceProvider</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ServiceProvider</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="n">ResponseDecoding</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nd">@override</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span><span class="w"> </span><span class="n">JsonFactory</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">get</span><span class="w"> </span><span class="n">factories</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="nl">User:</span><span class="w"> </span><span class="p">(</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">),</span><span class="w"> </span><span class="c1">// Make sure this is here</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">  </span><span class="p">};</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Verify factory function signature</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1">// Correct signature</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kd">factory</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">dynamic</span><span class="o">&gt;</span><span class="w"> </span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_$UserFromJson</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1">// Not this</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="kd">factory</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="kt">dynamic</span><span class="w"> </span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_$UserFromJson</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="my-forms-arent-validating-correctly">My forms aren't validating correctly<a class="headerlink" href="#my-forms-arent-validating-correctly" title="Permanent link">&para;</a></h3>
+<p>Common form issues:</p>
+<ol>
+<li>
+<p><strong>Check field names match</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1">// Field definition</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="s1">&#39;email&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">TextFieldState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="nl">rules:</span><span class="w"> </span><span class="p">[</span><span class="n">Rules</span><span class="p">.</span><span class="n">email</span><span class="p">()]),</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="c1">// Field access - names must match exactly</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="n">controller</span><span class="p">.</span><span class="n">updateText</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w"> </span><span class="c1">// Not &#39;emailField&#39; or &#39;userEmail&#39;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Ensure rules are appropriate</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1">// Wrong - required rule on optional field</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="s1">&#39;newsletter&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">CheckboxFieldState</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nl">rules:</span><span class="w"> </span><span class="p">[</span><span class="n">Rules</span><span class="p">.</span><span class="kd">required</span><span class="p">()]),</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="c1">// Right - no rules for optional checkbox</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="s1">&#39;newsletter&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">CheckboxFieldState</span><span class="p">(</span><span class="kc">false</span><span class="p">),</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="my-cache-isnt-working">My cache isn't working<a class="headerlink" href="#my-cache-isnt-working" title="Permanent link">&para;</a></h3>
+<p>Cache troubleshooting:</p>
+<ol>
+<li>
+<p><strong>Check cache keys are consistent</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1">// Wrong - different keys for same data</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="p">.</span><span class="n">cache</span><span class="p">(</span><span class="nl">cacheKey:</span><span class="w"> </span><span class="s1">&#39;users&#39;</span><span class="p">)</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">.</span><span class="n">cache</span><span class="p">(</span><span class="nl">cacheKey:</span><span class="w"> </span><span class="s1">&#39;user_list&#39;</span><span class="p">)</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="c1">// Right - consistent naming</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="p">.</span><span class="n">cache</span><span class="p">(</span><span class="nl">cacheKey:</span><span class="w"> </span><span class="s1">&#39;users_page_</span><span class="si">${</span><span class="n">page</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Verify cache duration</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1">// Too short - causes frequent network calls</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="p">.</span><span class="n">cache</span><span class="p">(</span><span class="nl">duration:</span><span class="w"> </span><span class="n">Duration</span><span class="p">(</span><span class="nl">seconds:</span><span class="w"> </span><span class="m">30</span><span class="p">))</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="c1">// Better - appropriate for data type</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="p">.</span><span class="n">cache</span><span class="p">(</span><span class="nl">duration:</span><span class="w"> </span><span class="n">Duration</span><span class="p">(</span><span class="nl">minutes:</span><span class="w"> </span><span class="m">5</span><span class="p">))</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="migration">Migration<a class="headerlink" href="#migration" title="Permanent link">&para;</a></h2>
+<h3 id="how-do-i-migrate-from-other-packages-to-bond">How do I migrate from other packages to Bond?<a class="headerlink" href="#how-do-i-migrate-from-other-packages-to-bond" title="Permanent link">&para;</a></h3>
+<h4 id="from-dio-to-bondfire">From Dio to BondFire<a class="headerlink" href="#from-dio-to-bondfire" title="Permanent link">&para;</a></h4>
+<p><strong>Before:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">dio</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">);</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="kd">final</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">List</span><span class="p">)</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="p">.</span><span class="n">map</span><span class="p">((</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">))</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">    </span><span class="p">.</span><span class="n">toList</span><span class="p">();</span>
+</code></pre></div></p>
+<p><strong>After:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">bondFire</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="n">ListResponse</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">)</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="p">.</span><span class="kd">factory</span><span class="p">(</span><span class="n">ListResponse</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="p">.</span><span class="n">fromJson</span><span class="p">)</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">    </span><span class="p">.</span><span class="n">execute</span><span class="p">();</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="kd">final</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>
+</code></pre></div></p>
+<h4 id="from-sharedpreferences-to-bond-cache">From SharedPreferences to Bond Cache<a class="headerlink" href="#from-sharedpreferences-to-bond-cache" title="Permanent link">&para;</a></h4>
+<p><strong>Before:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">prefs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">SharedPreferences</span><span class="p">.</span><span class="n">getInstance</span><span class="p">();</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="kd">await</span><span class="w"> </span><span class="n">prefs</span><span class="p">.</span><span class="n">setString</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">toJson</span><span class="p">()));</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kd">final</span><span class="w"> </span><span class="n">userJson</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="kd">final</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userJson</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">userJson</span><span class="p">))</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>After:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">Cache</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">);</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kd">final</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cache</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="w"> </span><span class="nl">fromJsonFactory:</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">);</span>
+</code></pre></div></p>
+<h3 id="how-do-i-migrate-existing-forms-to-bond-forms">How do I migrate existing forms to Bond Forms?<a class="headerlink" href="#how-do-i-migrate-existing-forms-to-bond-forms" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Identify form fields</strong> and their validation rules</li>
+<li><strong>Create field states</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">emailField</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TextFieldState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="nl">rules:</span><span class="w"> </span><span class="p">[</span><span class="n">Rules</span><span class="p">.</span><span class="kd">required</span><span class="p">(),</span><span class="w"> </span><span class="n">Rules</span><span class="p">.</span><span class="n">email</span><span class="p">()]);</span>
+</code></pre></div></li>
+<li><strong>Create form controller</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MyFormController</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AutoDisposeFormStateNotifier</span><span class="o">&lt;</span><span class="n">Result</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span><span class="c1">// Implementation</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">}</span>
+</code></pre></div></li>
+<li><strong>Update UI</strong> to use Bond form widgets or helpers</li>
+</ol>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-the-most-important-bond-conventions-to-follow">What are the most important Bond conventions to follow?<a class="headerlink" href="#what-are-the-most-important-bond-conventions-to-follow" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>One Service Provider per feature</strong> - keeps boundaries clear</li>
+<li><strong>Use typed responses</strong> - prevents runtime errors</li>
+<li><strong>Register JSON factories</strong> - enables shared decoding</li>
+<li><strong>Follow feature structure</strong> - data/presentation separation</li>
+<li><strong>Test with dependency injection</strong> - swap implementations in tests</li>
+</ol>
+<h3 id="how-should-i-structure-my-bond-project-for-a-team">How should I structure my Bond project for a team?<a class="headerlink" href="#how-should-i-structure-my-bond-project-for-a-team" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>lib/
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>├── features/           # Business features
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>│   ├── auth/          # One developer/team
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>│   ├── posts/         # Another developer/team
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>│   └── messaging/     # Third developer/team
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>├── core/              # Shared by all teams
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>│   ├── services/      # Common services
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>│   ├── widgets/       # Shared UI components
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>│   └── utils/         # Utility functions
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>└── providers/         # App-level configuration
+</code></pre></div>
+<p><strong>Team Guidelines:</strong>
+- Each team owns specific features
+- Core changes require review from all teams
+- Use interfaces for cross-feature communication
+- Shared components go in core/widgets</p>
+<h3 id="what-testing-strategy-should-i-use">What testing strategy should I use?<a class="headerlink" href="#what-testing-strategy-should-i-use" title="Permanent link">&para;</a></h3>
+<p><strong>Testing Pyramid:</strong>
+1. <strong>Unit Tests</strong> (70%): Test individual classes and functions
+2. <strong>Widget Tests</strong> (20%): Test UI components in isolation
+3. <strong>Integration Tests</strong> (10%): Test complete user flows</p>
+<p><strong>Bond-Specific Testing:</strong>
+- Test Service Providers with mock dependencies
+- Test form controllers with validation scenarios
+- Test API services with mock responses
+- Test navigation flows with route guards</p>
+<h2 id="common-patterns">Common Patterns<a class="headerlink" href="#common-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="how-do-i-implement-real-time-features">How do I implement real-time features?<a class="headerlink" href="#how-do-i-implement-real-time-features" title="Permanent link">&para;</a></h3>
+<p>Use WebSockets with Bond's architecture:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ChatServiceProvider</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ServiceProvider</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">  </span><span class="nd">@override</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">register</span><span class="p">(</span><span class="n">GetIt</span><span class="w"> </span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span><span class="n">it</span><span class="p">.</span><span class="n">registerLazySingleton</span><span class="o">&lt;</span><span class="n">WebSocketService</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">WebSocketService</span><span class="p">());</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="w">    </span><span class="n">it</span><span class="p">.</span><span class="n">registerLazySingleton</span><span class="o">&lt;</span><span class="n">ChatRepository</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ChatRepository</span><span class="p">(</span><span class="n">it</span><span class="p">(),</span><span class="w"> </span><span class="n">it</span><span class="p">()));</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="p">}</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ChatRepository</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">WebSocketService</span><span class="w"> </span><span class="n">_webSocket</span><span class="p">;</span>
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">ChatApiService</span><span class="w"> </span><span class="n">_apiService</span><span class="p">;</span>
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a><span class="w">  </span><span class="n">Stream</span><span class="o">&lt;</span><span class="n">Message</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">get</span><span class="w"> </span><span class="n">messageStream</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_webSocket</span><span class="p">.</span><span class="n">messageStream</span>
+<a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a><span class="w">      </span><span class="p">.</span><span class="n">map</span><span class="p">((</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Message</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">data</span><span class="p">));</span>
+<a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a>
+<a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a><span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sendMessage</span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a><span class="w">    </span><span class="c1">// Send via WebSocket for real-time</span>
+<a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a><span class="w">    </span><span class="n">_webSocket</span><span class="p">.</span><span class="n">send</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;text&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">text</span><span class="p">});</span>
+<a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a>
+<a id="__codelineno-32-20" name="__codelineno-32-20" href="#__codelineno-32-20"></a><span class="w">    </span><span class="c1">// Also send via API for persistence</span>
+<a id="__codelineno-32-21" name="__codelineno-32-21" href="#__codelineno-32-21"></a><span class="w">    </span><span class="kd">await</span><span class="w"> </span><span class="n">_apiService</span><span class="p">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+<a id="__codelineno-32-22" name="__codelineno-32-22" href="#__codelineno-32-22"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-32-23" name="__codelineno-32-23" href="#__codelineno-32-23"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="how-do-i-implement-offline-support">How do I implement offline support?<a class="headerlink" href="#how-do-i-implement-offline-support" title="Permanent link">&para;</a></h3>
+<p>Combine caching with connectivity checking:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">OfflineRepository</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">ApiService</span><span class="w"> </span><span class="n">_apiService</span><span class="p">;</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">Cache</span><span class="w"> </span><span class="n">_cache</span><span class="p">;</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">ConnectivityService</span><span class="w"> </span><span class="n">_connectivity</span><span class="p">;</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Post</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">getPosts</span><span class="p">()</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">isOnline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_connectivity</span><span class="p">.</span><span class="n">isConnected</span><span class="p">();</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isOnline</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a><span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">posts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_apiService</span><span class="p">.</span><span class="n">getPosts</span><span class="p">();</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a><span class="w">        </span><span class="kd">await</span><span class="w"> </span><span class="n">_cache</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">posts</span><span class="p">,</span><span class="w"> </span><span class="n">Duration</span><span class="p">(</span><span class="nl">hours:</span><span class="w"> </span><span class="m">24</span><span class="p">));</span>
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">posts</span><span class="p">;</span>
+<a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a><span class="w">        </span><span class="c1">// Network failed, try cache</span>
+<a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">cached</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_cache</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Post</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">);</span>
+<a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">cached</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="p">[];</span>
+<a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-33-19" name="__codelineno-33-19" href="#__codelineno-33-19"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-20" name="__codelineno-33-20" href="#__codelineno-33-20"></a><span class="w">      </span><span class="c1">// Offline mode</span>
+<a id="__codelineno-33-21" name="__codelineno-33-21" href="#__codelineno-33-21"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">cached</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_cache</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Post</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">);</span>
+<a id="__codelineno-33-22" name="__codelineno-33-22" href="#__codelineno-33-22"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">cached</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="p">[];</span>
+<a id="__codelineno-33-23" name="__codelineno-33-23" href="#__codelineno-33-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-24" name="__codelineno-33-24" href="#__codelineno-33-24"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-33-25" name="__codelineno-33-25" href="#__codelineno-33-25"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<h3 id="where-can-i-get-support">Where can I get support?<a class="headerlink" href="#where-can-i-get-support" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Documentation</strong>: Check this comprehensive guide first</li>
+<li><strong>GitHub Issues</strong>: Report bugs and request features</li>
+<li><strong>Discord Community</strong>: Get help from other developers</li>
+<li><strong>Stack Overflow</strong>: Tag questions with <code>flutter-bond</code></li>
+<li><strong>Email Support</strong>: Enterprise customers get priority support</li>
+</ol>
+<h3 id="how-do-i-contribute-to-bond">How do I contribute to Bond?<a class="headerlink" href="#how-do-i-contribute-to-bond" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Documentation</strong>: Improve guides and add examples</li>
+<li><strong>Bug Reports</strong>: File detailed issues with reproduction steps</li>
+<li><strong>Feature Requests</strong>: Propose new features with use cases</li>
+<li><strong>Code Contributions</strong>: Submit pull requests with tests</li>
+<li><strong>Community</strong>: Help other developers in Discord</li>
+</ol>
+<h3 id="whats-the-roadmap-for-bond">What's the roadmap for Bond?<a class="headerlink" href="#whats-the-roadmap-for-bond" title="Permanent link">&para;</a></h3>
+<p>Check the <a href="https://github.com/onestudio-co/bond-core/projects">GitHub roadmap</a> for:
+- Upcoming features and improvements
+- Breaking changes and migration guides
+- Community feature requests
+- Long-term architectural plans</p>
+<h2 id="enterprise">Enterprise<a class="headerlink" href="#enterprise" title="Permanent link">&para;</a></h2>
+<h3 id="is-bond-suitable-for-enterprise-applications">Is Bond suitable for enterprise applications?<a class="headerlink" href="#is-bond-suitable-for-enterprise-applications" title="Permanent link">&para;</a></h3>
+<p>Yes! Bond is designed for production use with:
+- <strong>Proven architecture</strong> used in real applications
+- <strong>Comprehensive testing</strong> support
+- <strong>Security best practices</strong> built-in
+- <strong>Scalable structure</strong> for large teams
+- <strong>Long-term support</strong> for stable versions</p>
+<h3 id="do-you-offer-enterprise-support">Do you offer enterprise support?<a class="headerlink" href="#do-you-offer-enterprise-support" title="Permanent link">&para;</a></h3>
+<p>Yes, enterprise support includes:
+- Priority issue resolution
+- Architecture consulting
+- Custom feature development
+- Training and onboarding
+- Migration assistance</p>
+<p>Contact us at enterprise@bond.dev for more information.</p>
+<h3 id="can-i-use-bond-in-regulated-industries">Can I use Bond in regulated industries?<a class="headerlink" href="#can-i-use-bond-in-regulated-industries" title="Permanent link">&para;</a></h3>
+<p>Bond supports compliance requirements through:
+- <strong>Security features</strong>: Certificate pinning, encryption, secure storage
+- <strong>Audit trails</strong>: Comprehensive logging and analytics
+- <strong>Data governance</strong>: Clear data flow and storage policies
+- <strong>Testing requirements</strong>: Comprehensive test coverage support</p>
+<h2 id="version-and-compatibility">Version and Compatibility<a class="headerlink" href="#version-and-compatibility" title="Permanent link">&para;</a></h2>
+<h3 id="what-flutter-versions-does-bond-support">What Flutter versions does Bond support?<a class="headerlink" href="#what-flutter-versions-does-bond-support" title="Permanent link">&para;</a></h3>
+<p>Bond supports Flutter 3.10.0 and later. We test against:
+- <strong>Current stable</strong> Flutter release
+- <strong>Previous stable</strong> release for compatibility
+- <strong>Beta channel</strong> for upcoming features</p>
+<h3 id="how-often-does-bond-release-new-versions">How often does Bond release new versions?<a class="headerlink" href="#how-often-does-bond-release-new-versions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Patch releases</strong> (bug fixes): As needed</li>
+<li><strong>Minor releases</strong> (new features): Monthly</li>
+<li><strong>Major releases</strong> (breaking changes): Every 6-12 months</li>
+</ul>
+<h3 id="whats-the-upgrade-path-for-breaking-changes">What's the upgrade path for breaking changes?<a class="headerlink" href="#whats-the-upgrade-path-for-breaking-changes" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Read release notes</strong> for migration instructions</li>
+<li><strong>Use migration tools</strong>: <code>bond migrate --from=1.x --to=2.x</code></li>
+<li><strong>Test thoroughly</strong> with the new version</li>
+<li><strong>Update incrementally</strong> rather than all at once</li>
+</ol>
+<h2 id="troubleshooting_1">Troubleshooting<a class="headerlink" href="#troubleshooting_1" title="Permanent link">&para;</a></h2>
+<h3 id="my-app-wont-build-after-updating-bond">My app won't build after updating Bond<a class="headerlink" href="#my-app-wont-build-after-updating-bond" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Clean and rebuild</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>flutter<span class="w"> </span>clean
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>flutter<span class="w"> </span>pub<span class="w"> </span>get
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>flutter<span class="w"> </span>packages<span class="w"> </span>pub<span class="w"> </span>run<span class="w"> </span>build_runner<span class="w"> </span>build<span class="w"> </span>--delete-conflicting-outputs
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Check for breaking changes</strong> in release notes</p>
+</li>
+<li>
+<p><strong>Update imports</strong> if package structure changed</p>
+</li>
+<li>
+<p><strong>Run Bond analysis</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>bond<span class="w"> </span>analyze<span class="w"> </span>--fix
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="performance-is-worse-after-updating">Performance is worse after updating<a class="headerlink" href="#performance-is-worse-after-updating" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Profile your app</strong> to identify bottlenecks</li>
+<li><strong>Check release notes</strong> for performance-related changes</li>
+<li><strong>Review caching strategies</strong> - defaults may have changed</li>
+<li><strong>Report performance regressions</strong> to the Bond team</li>
+</ol>
+<p>Still have questions? Join our <a href="https://discord.gg/bond">Discord community</a> or check the <a href="https://github.com/onestudio-co/bond-core/discussions">GitHub discussions</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "content.tabs.link", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
