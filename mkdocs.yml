@@ -61,41 +61,46 @@ markdown_extensions:
       linenums: false
 
 nav:
-  - Home: index.md
-  - Prologue:
-      - Overview: prologue/index.md
+  - Overview:
+      - Home: index.md
+      - What Is Bond: overview/index.md
+      - Philosophy: overview/philosophy.md
+      - Upgrades: overview/upgrades.md
   - Getting Started:
-      - Introduction: getting-started/index.md
-      - Environment: getting-started/environment.md
+      - Install and Create: getting-started/index.md
+      - Environments: getting-started/environment.md
       - Firebase: getting-started/firebase.md
-  - Architecture Concepts:
-      - Service Providers: architecture-concepts/service-providers.md
-  - The Basics:
-      - Routing & Navigation: user-interface/navigation.md
-      - Localization: user-interface/localization.md
-      - Theming: user-interface/themes.md
-      - Extensions: user-interface/extensions.md
-      - Launcher & Splash: user-interface/launcher.md
-  - Data & Networking:
-      - Overview: data-networking/index.md
-  - Forms:
-      - Overview: forms/index.md
-  - Caching:
-      - Overview: caching/index.md
-  - Notifications:
-      - Overview: notifications/index.md
-  - Analytics:
-      - Overview: analytics/index.md
+      - Flavors: deployment/flavors.md
+  - Core Concepts:
+      - Service Providers: core-concepts/service-providers.md
+      - Modules and Boundaries: core-concepts/modules-and-boundaries.md
+      - Configuration: core-concepts/configuration.md
+      - Error Handling: core-concepts/error-handling.md
+  - Guides:
+      - Data and Networking: data-networking/index.md
+      - Forms: forms/index.md
+      - Caching: caching/index.md
+      - Notifications: notifications/index.md
+      - Analytics: analytics/index.md
+      - Authentication: guides/authentication.md
+  - UI:
+      - Theming: ui/themes.md
+      - Navigation: ui/navigation.md
+      - Localization: ui/localization.md
+      - Reusable Widgets: ui/reusable-widgets.md
+      - Extensions: ui/extensions.md
+      - Launcher: ui/launcher.md
   - Tooling:
       - Bond CLI: tooling/bond-cli.md
+      - Monorepo: tooling/monorepo.md
+      - Debugging and Logging: tooling/debugging-logging.md
       - Change App Name: tooling/change_app_name.md
-  - Deployment:
-      - Flavors: deployment/flavors.md
-      - CI/CD: deployment/ci-cd.md
-  - Advanced Topics:
+  - Advanced:
       - Index: advanced-topics/index.md
-  - Cookbook:
+  - Recipes:
       - Index: cookbook/index.md
+  - Deployment:
+      - CI/CD: deployment/ci-cd.md
   - Reference:
       - Index: reference/index.md
   - FAQ: faq/index.md

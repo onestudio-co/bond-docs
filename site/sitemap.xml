@@ -13,15 +13,27 @@
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://example.com/docs/architecture-concepts/service-providers/</loc>
-         <lastmod>2025-08-21</lastmod>
-    </url>
-    <url>
          <loc>https://example.com/docs/caching/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
          <loc>https://example.com/docs/cookbook/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-concepts/configuration/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-concepts/error-handling/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-concepts/modules-and-boundaries/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-concepts/service-providers/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
@@ -61,11 +73,27 @@
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
+         <loc>https://example.com/docs/guides/authentication/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
          <loc>https://example.com/docs/notifications/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://example.com/docs/prologue/</loc>
+         <loc>https://example.com/docs/overview/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/overview/philosophy/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/overview/upgrades/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/overview/prologue/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
@@ -81,23 +109,35 @@
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://example.com/docs/user-interface/extensions/</loc>
+         <loc>https://example.com/docs/tooling/debugging-logging/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://example.com/docs/user-interface/launcher/</loc>
+         <loc>https://example.com/docs/tooling/monorepo/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://example.com/docs/user-interface/localization/</loc>
+         <loc>https://example.com/docs/ui/extensions/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://example.com/docs/user-interface/navigation/</loc>
+         <loc>https://example.com/docs/ui/launcher/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://example.com/docs/user-interface/themes/</loc>
+         <loc>https://example.com/docs/ui/localization/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/ui/navigation/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/ui/reusable-widgets/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/ui/themes/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
 </urlset>
