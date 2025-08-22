@@ -109,13 +109,14 @@ nav:
       - Modules & Boundaries: core-concepts/modules-and-boundaries.md
       - Configuration: core-concepts/configuration.md
       - Error Handling: core-concepts/error-handling.md
-  - Guides:
-      - Data & Networking: data-networking/index.md
-      - Forms: forms/index.md
-      - Caching: caching/index.md
-      - Notifications: notifications/index.md
-      - Analytics: analytics/index.md
-      - Authentication: guides/authentication.md
+  - Core Packages:
+      - core-packages/index.md
+      - BondFire (Networking): core-packages/networking.md
+      - Bond Forms: core-packages/forms.md
+      - Bond Cache: core-packages/caching.md
+      - Bond Analytics: core-packages/analytics.md
+      - Bond Notifications: core-packages/notifications.md
+      - Bond Authentication: core-packages/authentication.md
   - User Interface:
       - Theming: ui/themes.md
       - Navigation: ui/navigation.md

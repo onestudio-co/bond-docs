@@ -37,6 +37,34 @@
          <lastmod>2025-08-22</lastmod>
     </url>
     <url>
+         <loc>https://example.com/docs/core-packages/</loc>
+         <lastmod>2025-08-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-packages/analytics/</loc>
+         <lastmod>2025-08-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-packages/authentication/</loc>
+         <lastmod>2025-08-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-packages/caching/</loc>
+         <lastmod>2025-08-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-packages/forms/</loc>
+         <lastmod>2025-08-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-packages/networking/</loc>
+         <lastmod>2025-08-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/docs/core-packages/notifications/</loc>
+         <lastmod>2025-08-22</lastmod>
+    </url>
+    <url>
          <loc>https://example.com/docs/data-networking/</loc>
          <lastmod>2025-08-22</lastmod>
     </url>
