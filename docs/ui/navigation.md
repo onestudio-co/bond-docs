@@ -393,6 +393,6 @@ void main() {
 
 ## Next Steps
 
-- [Learn about Localization](/docs/ui/localization)
-- [Build Reusable Widgets](/docs/ui/reusable-widgets)
-- [Explore Authentication](/docs/guides/authentication)
+- [Learn about Localization](localization.md)
+- [Build Reusable Widgets](reusable-widgets.md)
+- [Explore Authentication](../guides/authentication.md)

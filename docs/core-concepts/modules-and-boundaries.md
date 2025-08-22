@@ -371,6 +371,6 @@ void main() {
 
 Now that you understand modular architecture in Bond:
 
-- [Learn about Configuration](/docs/core-concepts/configuration) - Understand how to configure features
-- [Explore Error Handling](/docs/core-concepts/error-handling) - Handle errors across feature boundaries
-- [Build Your First Feature](/docs/guides/data-networking) - Apply these concepts in practice
+- [Learn about Configuration](configuration.md) - Understand how to configure features
+- [Explore Error Handling](error-handling.md) - Handle errors across feature boundaries
+- [Build Your First Feature](../data-networking/index.md) - Apply these concepts in practice

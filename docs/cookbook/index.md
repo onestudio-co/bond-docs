@@ -684,10 +684,10 @@ class InputSanitizer {
 
 Explore more advanced topics:
 
-- [Advanced Patterns](/docs/advanced) - Complex architectural patterns
-- [Performance Optimization](/docs/advanced/performance) - Make your app faster
-- [Security Best Practices](/docs/advanced/security) - Secure your application
-- [Testing Strategies](/docs/testing) - Comprehensive testing approaches
+- [Advanced Patterns](../advanced-topics/index.md) - Complex architectural patterns
+- [Performance Optimization](../advanced-topics/index.md) - Make your app faster
+- [Security Best Practices](../advanced-topics/index.md) - Secure your application
+- [Testing Strategies](../faq/index.md) - Comprehensive testing approaches
 
 ## Contributing Recipes
 

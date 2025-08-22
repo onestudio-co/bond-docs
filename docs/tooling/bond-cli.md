@@ -568,9 +568,9 @@ bond fix --auto
 
 Now that you understand the Bond CLI:
 
-- [Learn about Monorepo](/docs/tooling/monorepo) - Manage multiple packages
-- [Explore Debugging](/docs/tooling/debugging-logging) - Debug Bond applications
-- [Set up CI/CD](/docs/deployment/ci-cd) - Automate your development workflow
+- [Learn about Monorepo](monorepo.md) - Manage multiple packages
+- [Explore Debugging](debugging-logging.md) - Debug Bond applications
+- [Set up CI/CD](../deployment/ci-cd.md) - Automate your development workflow
 - [Join the Community](https://discord.gg/bond) - Get help and share knowledge
 
 ## Conclusion

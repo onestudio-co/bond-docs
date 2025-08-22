@@ -455,11 +455,11 @@ Now that you have a working Bond project:
 
 ### Recommended Learning Path
 
-1. [Environment Configuration](/docs/getting-started/environment) - Set up your API endpoints and secrets
-2. [Firebase Setup](/docs/getting-started/firebase) - Configure authentication and analytics
-3. [Service Providers](/docs/core-concepts/service-providers) - Deep dive into Bond's architecture
-4. [Data & Networking](/docs/guides/data-networking) - Learn BondFire for API calls
-5. [Forms](/docs/guides/forms) - Build robust forms with validation
+1. [Environment Configuration](environment.md) - Set up your API endpoints and secrets
+2. [Firebase Setup](firebase.md) - Configure authentication and analytics
+3. [Service Providers](../core-concepts/service-providers.md) - Deep dive into Bond's architecture
+4. [Data & Networking](../data-networking/index.md) - Learn BondFire for API calls
+5. [Forms](../forms/index.md) - Build robust forms with validation
 
 ## Troubleshooting
 

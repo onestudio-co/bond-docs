@@ -239,6 +239,6 @@ The framework is designed to grow with your needs - from simple prototypes to co
 
 Now that you understand Bond's philosophy and design principles:
 
-- [Learn about Upgrades](/docs/overview/upgrades) - Understand how Bond evolves over time
-- [Get Started](/docs/getting-started) - Create your first Bond application
-- [Explore Core Concepts](/docs/core-concepts) - Deep dive into Service Providers and architecture
+- [Learn about Upgrades](upgrades.md) - Understand how Bond evolves over time
+- [Get Started](../getting-started/index.md) - Create your first Bond application
+- [Explore Core Concepts](../core-concepts/service-providers.md) - Deep dive into Service Providers and architecture

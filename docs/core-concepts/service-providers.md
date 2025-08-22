@@ -10,7 +10,8 @@ If you open the `lib/app.dart` file included with Bond, you will see a `provider
 
 In this overview, you will learn how to write your own service providers and register them with your Bond application.
 
-> **Note:** Service providers are a great way to group related functionality and keep your application organized. If you find yourself registering many bindings in a single place, consider breaking them up into multiple service providers.
+!!! note
+    Service providers are a great way to group related functionality and keep your application organized. If you find yourself registering many bindings in a single place, consider breaking them up into multiple service providers.
 
 ## Writing Service Providers
 
@@ -38,7 +39,7 @@ class RssServiceProvider extends ServiceProvider {
 }
 ```
 
-This service provider only defines a `register` method, and uses that method to define an implementation of `RssReader` in the service container. If you're not yet familiar with Bond's service container, check out [its documentation](/docs/container).
+This service provider only defines a `register` method, and uses that method to define an implementation of `RssReader` in the service container. If you're not yet familiar with Bond's service container, it's based on GetIt and provides dependency injection throughout your application.
 
 #### Bindings and Singletons
 
@@ -370,6 +371,6 @@ class AnalyticsServiceProvider extends ServiceProvider { /* analytics only */ }
 
 Now that you understand service providers, you're ready to explore:
 
-- [Modules and Boundaries](/docs/core-concepts/modules-and-boundaries) - Learn how to organize features
-- [Configuration](/docs/core-concepts/configuration) - Understand environment management  
-- [Data and Networking](/docs/guides/data-networking) - Build your first API integration
+- [Modules and Boundaries](modules-and-boundaries.md) - Learn how to organize features
+- [Configuration](configuration.md) - Understand environment management  
+- [Data and Networking](../data-networking/index.md) - Build your first API integration

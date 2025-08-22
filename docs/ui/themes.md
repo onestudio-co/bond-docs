@@ -178,6 +178,6 @@ class WelcomeCard extends StatelessWidget {
 
 ## Next Steps
 
-- [Learn about Navigation](/docs/ui/navigation)
-- [Explore Localization](/docs/ui/localization)
-- [Build Reusable Widgets](/docs/ui/reusable-widgets)
+- [Learn about Navigation](navigation.md)
+- [Explore Localization](localization.md)
+- [Build Reusable Widgets](reusable-widgets.md)

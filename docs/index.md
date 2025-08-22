@@ -60,10 +60,10 @@ Comprehensive guides, tutorials, and examples for every aspect of Bond developme
 
 Ready to transform your Flutter development experience?
 
-- **[Install and Create](/docs/getting-started)** - Create your first Bond project
-- **[Learn the Architecture](/docs/core-concepts)** - Understand Bond's patterns
-- **[Explore Packages](/docs/guides)** - Deep dive into Bond's capabilities
-- **[See Examples](/docs/recipes)** - Copy proven patterns for common scenarios
+- **[Install and Create](getting-started/index.md)** - Create your first Bond project
+- **[Learn the Architecture](core-concepts/service-providers.md)** - Understand Bond's patterns
+- **[Explore Packages](data-networking/index.md)** - Deep dive into Bond's capabilities
+- **[See Examples](cookbook/index.md)** - Copy proven patterns for common scenarios
 
 ## Join the Community
 

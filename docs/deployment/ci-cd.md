@@ -729,7 +729,7 @@ timeout-minutes: 60
 
 ## Next Steps
 
-- [Learn about Flavors](/docs/deployment/flavors) - Multi-environment deployment
-- [Explore Advanced Topics](/docs/advanced) - Complex deployment scenarios
-- [Set up Monitoring](/docs/advanced/monitoring) - Production monitoring
+- [Learn about Flavors](flavors.md) - Multi-environment deployment
+- [Explore Advanced Topics](../advanced-topics/index.md) - Complex deployment scenarios
+- [Set up Monitoring](../advanced-topics/index.md) - Production monitoring
 - [Join the Community](https://discord.gg/bond) - Share CI/CD experiences

@@ -25,3 +25,4 @@ final res = await bondFire.get<User>('/me')
 
 - Log unexpected errors with context
 - Prefer idempotent retries for safe operations
+

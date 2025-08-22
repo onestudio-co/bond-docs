@@ -2403,9 +2403,10 @@
 <p>But what do we mean by "bootstrapped"? In general, we mean <strong>registering</strong> things, including registering service container bindings, event listeners, middleware, and even routes. Service providers are the central place to configure your application.</p>
 <p>If you open the <code>lib/app.dart</code> file included with Bond, you will see a <code>providers</code> array. These are all of the service provider classes that will be loaded for your application. By default, a set of Bond core service providers are listed in this array. These providers bootstrap the Bond core components, such as the networking client, cache, form validation, and others.</p>
 <p>In this overview, you will learn how to write your own service providers and register them with your Bond application.</p>
-<blockquote>
-<p><strong>Note:</strong> Service providers are a great way to group related functionality and keep your application organized. If you find yourself registering many bindings in a single place, consider breaking them up into multiple service providers.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Service providers are a great way to group related functionality and keep your application organized. If you find yourself registering many bindings in a single place, consider breaking them up into multiple service providers.</p>
+</div>
 <h2 id="writing-service-providers">Writing Service Providers<a class="headerlink" href="#writing-service-providers" title="Permanent link">&para;</a></h2>
 <p>All service providers extend the <code>ServiceProvider</code> class. Most service providers contain a <code>register</code> method. Within this method, you should <strong>only bind things into the service container</strong>. You should never attempt to register any event listeners, routes, or any other piece of functionality within the <code>register</code> method.</p>
 <p>The Bond CLI can generate a new provider via the <code>bond create provider</code> command:</p>
@@ -2423,7 +2424,7 @@
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
 </code></pre></div>
-<p>This service provider only defines a <code>register</code> method, and uses that method to define an implementation of <code>RssReader</code> in the service container. If you're not yet familiar with Bond's service container, check out <a href="/docs/container">its documentation</a>.</p>
+<p>This service provider only defines a <code>register</code> method, and uses that method to define an implementation of <code>RssReader</code> in the service container. If you're not yet familiar with Bond's service container, it's based on GetIt and provides dependency injection throughout your application.</p>
 <h4 id="bindings-and-singletons">Bindings and Singletons<a class="headerlink" href="#bindings-and-singletons" title="Permanent link">&para;</a></h4>
 <p>Within a service provider, you always have access to the service container via the <code>it</code> parameter. You can register a binding using the <code>registerFactory</code> method. This method accepts the class or interface name that you wish to register along with a closure that returns an instance of the class:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">it</span><span class="p">.</span><span class="n">registerFactory</span><span class="o">&lt;</span><span class="n">HelpSpot</span><span class="err">\</span><span class="n">Api</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HelpSpotApi</span><span class="p">());</span>
@@ -2693,9 +2694,9 @@
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <p>Now that you understand service providers, you're ready to explore:</p>
 <ul>
-<li><a href="/docs/core-concepts/modules-and-boundaries">Modules and Boundaries</a> - Learn how to organize features</li>
-<li><a href="/docs/core-concepts/configuration">Configuration</a> - Understand environment management  </li>
-<li><a href="/docs/guides/data-networking">Data and Networking</a> - Build your first API integration</li>
+<li><a href="../modules-and-boundaries/">Modules and Boundaries</a> - Learn how to organize features</li>
+<li><a href="../configuration/">Configuration</a> - Understand environment management  </li>
+<li><a href="../../data-networking/">Data and Networking</a> - Build your first API integration</li>
 </ul>
 
 

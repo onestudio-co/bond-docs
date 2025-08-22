@@ -320,6 +320,6 @@ If you encounter issues during upgrades:
 
 Now that you understand Bond's upgrade process:
 
-- [Start Building](/docs/getting-started) - Create your first Bond application
-- [Learn Core Concepts](/docs/core-concepts) - Understand Bond's architecture
+- [Start Building](../getting-started/index.md) - Create your first Bond application
+- [Learn Core Concepts](../core-concepts/service-providers.md) - Understand Bond's architecture
 - [Join the Community](https://discord.gg/bond) - Connect with other Bond developers

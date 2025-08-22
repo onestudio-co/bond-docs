@@ -345,7 +345,7 @@ class EncryptedStorage {
 
 Continue exploring Bond's advanced capabilities:
 
-- [Performance Optimization](/docs/advanced/performance) - Detailed performance tuning
-- [Security Hardening](/docs/advanced/security) - Comprehensive security guide
-- [Testing Strategies](/docs/testing) - Advanced testing patterns
-- [Deployment](/docs/deployment) - Production deployment strategies
+- [Performance Optimization](../cookbook/index.md) - Detailed performance tuning
+- [Security Hardening](../cookbook/index.md) - Comprehensive security guide
+- [Testing Strategies](../faq/index.md) - Advanced testing patterns
+- [Deployment](../deployment/ci-cd.md) - Production deployment strategies

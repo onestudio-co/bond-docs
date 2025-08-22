@@ -529,10 +529,10 @@ void debugEnvironment() {
 
 Now that you understand environment management in Bond:
 
-1. [Set up Firebase](/docs/getting-started/firebase) - Configure Firebase for each environment
-2. [Learn about Flavors](/docs/deployment/flavors) - Understand how flavors work with environments
-3. [Explore Service Providers](/docs/core-concepts/service-providers) - See how configuration is used in providers
-4. [Set up CI/CD](/docs/deployment/ci-cd) - Automate builds with proper environment handling
+1. [Set up Firebase](firebase.md) - Configure Firebase for each environment
+2. [Learn about Flavors](../deployment/flavors.md) - Understand how flavors work with environments
+3. [Explore Service Providers](../core-concepts/service-providers.md) - See how configuration is used in providers
+4. [Set up CI/CD](../deployment/ci-cd.md) - Automate builds with proper environment handling
 
 ## Best Practices Summary
 

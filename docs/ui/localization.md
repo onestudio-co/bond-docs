@@ -588,6 +588,6 @@ class AccessibleText extends StatelessWidget {
 
 ## Next Steps
 
-- [Build Reusable Widgets](/docs/ui/reusable-widgets)
-- [Explore Theming](/docs/ui/themes)
-- [Learn about Navigation](/docs/ui/navigation)
+- [Build Reusable Widgets](reusable-widgets.md)
+- [Explore Theming](themes.md)
+- [Learn about Navigation](navigation.md)
